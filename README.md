@@ -10,7 +10,7 @@
 
 ## Development
 
-The Remotion logo was built in Remotion
+The Remotion logo was built in Remotion, of course!
 
 ```bash
 npm install
