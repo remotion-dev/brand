@@ -2,8 +2,17 @@
 
 ## With Title
 
-![withtitle.png](withtitle.png)
+![Logo with title](withtitle/element-0.png)
 
 ## Without title
 
-![logo.png](logo.png)
+![Logo](withouttitle/element-0.png)
+
+## Development
+
+The Remotion logo was built in Remotion
+
+```bash
+npm install
+npm run build
+```

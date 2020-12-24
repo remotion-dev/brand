@@ -5,8 +5,8 @@
 	"scripts": {
 		"start": "remotion preview src/index.tsx",
 		"build": "npm run build-without-title && npm run build-with-title",
-		"build-without-title": "ts-node render.ts Logo withouttitle --png",
-		"build-with-title": "ts-node render.ts LogoWithTitle withtitle --png",
+		"build-without-title": "ts-node render.ts Logo withouttitle --png --overwrite",
+		"build-with-title": "ts-node render.ts LogoWithTitle withtitle --png --overwrite",
 		"test": "eslint 'src' --ext ts,tsx"
 	},
 	"repository": {},
