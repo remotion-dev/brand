@@ -14,7 +14,7 @@ const Subtitle = styled.div`
 	font-family: 'SF Pro Text';
 	font-weight: 700;
 	position: absolute;
-	margin-top: 550px;
+	margin-top: 600px;
 	margin-left: 1005px;
 	background: linear-gradient(to right, #4290f5, #42e9f5);
 	-webkit-background-clip: text;
@@ -33,7 +33,7 @@ export const SocialPreview: React.FC = () => {
 					flex: 1,
 					justifyContent: 'center',
 					alignItems: 'center',
-					transform: `scale(0.88) translateY(-50px)`,
+					transform: `scale(0.88)`,
 				}}
 			>
 				<LogoWithTitle />
