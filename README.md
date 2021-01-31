@@ -1,4 +1,6 @@
-# Remotion Logo
+# Remotion Brand assets
+
+This repo includes the logo, logo with title, and a social preview image (when posting on social media).
 
 ## With Title
 
@@ -7,6 +9,10 @@
 ## Without title
 
 ![Logo](withouttitle/element-0.png)
+
+## Social Preview
+
+![Logo](social-preview/element-0.png)
 
 ## Development
 
