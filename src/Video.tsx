@@ -1,6 +1,7 @@
 import {Composition} from 'remotion';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
+import {SocialPreview} from './SocialPreview';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -11,7 +12,7 @@ export const RemotionVideo: React.FC = () => {
 				height={820}
 				fps={30}
 				durationInFrames={1}
-				name="Logo"
+				id="Logo"
 			/>
 			<Composition
 				component={LogoWithTitle}
@@ -19,7 +20,15 @@ export const RemotionVideo: React.FC = () => {
 				height={1080}
 				fps={30}
 				durationInFrames={1}
-				name="LogoWithTitle"
+				id="LogoWithTitle"
+			/>
+			<Composition
+				component={SocialPreview}
+				width={2000}
+				height={1000}
+				fps={30}
+				durationInFrames={1}
+				id="SocialPreview"
 			/>
 		</>
 	);
