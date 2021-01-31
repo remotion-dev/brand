@@ -12,7 +12,7 @@ This repo includes the logo, logo with title, and a social preview image (when p
 
 ## Social Preview
 
-![Logo](social-preview/element-0.png)
+![Logo](socialpreview/element-0.png)
 
 ## Development
 
