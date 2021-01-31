@@ -21,6 +21,9 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={1}
 				id="LogoWithTitle"
+				defaultProps={{
+					yOffset: 0,
+				}}
 			/>
 			<Composition
 				component={SocialPreview}

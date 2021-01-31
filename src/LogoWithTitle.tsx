@@ -7,7 +7,9 @@ const Title = styled.div`
 	font-weight: 700;
 `;
 
-export const LogoWithTitle: React.FC = () => {
+export const LogoWithTitle: React.FC<{
+	yOffset: number;
+}> = ({yOffset}) => {
 	return (
 		<div
 			style={{
@@ -21,7 +23,7 @@ export const LogoWithTitle: React.FC = () => {
 		>
 			<Logo />
 			<div style={{flex: 1}}>
-				<Title>Remotion</Title>
+				<Title style={{transform: `translateY(${yOffset}px)`}}>Remotion</Title>
 			</div>
 		</div>
 	);
