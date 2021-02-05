@@ -8,6 +8,7 @@
 		"build-without-title": "remotion render src/index.tsx Logo withouttitle --png --overwrite",
 		"build-with-title": "remotion render src/index.tsx LogoWithTitle withtitle --png --overwrite",
 		"build-social-preview": "remotion render src/index.tsx SocialPreview socialpreview --png --overwrite",
+		"build-product-hunt": "remotion render src/index.tsx ProductHunt producthunt.mp4 --overwrite",
 		"test": "eslint 'src' --ext ts,tsx"
 	},
 	"repository": {},

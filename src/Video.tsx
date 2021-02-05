@@ -1,6 +1,7 @@
 import {Composition} from 'remotion';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
+import {ProductHuntLogo} from './ProductHuntLogo';
 import {SocialPreview} from './SocialPreview';
 
 export const RemotionVideo: React.FC = () => {
@@ -32,6 +33,14 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={1}
 				id="SocialPreview"
+			/>
+			<Composition
+				component={ProductHuntLogo}
+				width={240}
+				height={240}
+				fps={30}
+				durationInFrames={90}
+				id="ProductHunt"
 			/>
 		</>
 	);
