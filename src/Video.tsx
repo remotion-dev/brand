@@ -1,6 +1,9 @@
 import {Composition} from 'remotion';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
+import {Image1} from './ProductHuntImages/Image1';
+import {Image2} from './ProductHuntImages/Image2';
+import {Image3} from './ProductHuntImages/Image3';
 import {ProductHuntLogo} from './ProductHuntLogo';
 import {SocialPreview} from './SocialPreview';
 
@@ -41,6 +44,30 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={90}
 				id="ProductHunt"
+			/>
+			<Composition
+				component={Image1}
+				width={1270}
+				height={760}
+				fps={30}
+				durationInFrames={1}
+				id="Image1"
+			/>
+			<Composition
+				component={Image2}
+				width={1270}
+				height={760}
+				fps={30}
+				durationInFrames={1}
+				id="Image2"
+			/>
+			<Composition
+				component={Image3}
+				width={1270}
+				height={760}
+				fps={30}
+				durationInFrames={1}
+				id="Image3"
 			/>
 		</>
 	);
