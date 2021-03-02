@@ -14,6 +14,7 @@
 		"build-banner-3": "remotion render src/index.tsx Image3 banner-3 --png --overwrite",
 		"build-banners": "npm run build-banner-1 && npm run build-banner-2 && npm run build-banner-3",
 		"build-tutorial-graphics": "remotion render src/index.tsx TutorialGraphic tutorial-graphics --png --overwrite",
+		"build-monochromatic-logo": "remotion render src/index.tsx Monochromatic monochromatic --png --overwrite",
 		"upgrade": "npm upgrade @remotion/bundler @remotion/cli @remotion/eslint-config @remotion/renderer remotion",
 		"test": "eslint 'src' --ext ts,tsx"
 	},

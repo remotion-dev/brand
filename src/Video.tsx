@@ -1,12 +1,12 @@
 import {Composition} from 'remotion';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
+import {Monochromatic} from './Monochromatic';
 import {Image1} from './ProductHuntImages/Image1';
 import {Image2} from './ProductHuntImages/Image2';
 import {Image3} from './ProductHuntImages/Image3';
 import {ProductHuntLogo} from './ProductHuntLogo';
 import {SocialPreview} from './SocialPreview';
-import {TutorialGraphic} from './TutorialGraphic';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -71,12 +71,12 @@ export const RemotionVideo: React.FC = () => {
 				id="Image3"
 			/>
 			<Composition
-				component={TutorialGraphic}
-				width={1920}
-				height={1080}
+				component={Monochromatic}
+				width={820}
+				height={820}
 				fps={30}
-				durationInFrames={100}
-				id="TutorialGraphic"
+				durationInFrames={1}
+				id="Monochromatic"
 			/>
 		</>
 	);

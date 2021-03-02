@@ -8,7 +8,9 @@ const Container = styled.svg`
 export const Triangle: React.FC<{
 	size: number;
 	opacity: number;
-}> = ({size, opacity}) => {
+	color1?: string;
+	color2?: string;
+}> = ({size, opacity, color1 = '#42e9f5', color2 = '#4290f5'}) => {
 	return (
 		<Container
 			width={size}
@@ -18,8 +20,8 @@ export const Triangle: React.FC<{
 		>
 			<defs>
 				<linearGradient id="gradient">
-					<stop stopColor="#42e9f5" stopOpacity={1} offset="0" />
-					<stop stopColor="#4290f5" stopOpacity={1} offset="100%" />
+					<stop stopColor={color1} stopOpacity={1} offset="0" />
+					<stop stopColor={color2} stopOpacity={1} offset="100%" />
 				</linearGradient>
 			</defs>
 			<g stroke="url(#gradient)" strokeWidth="100" strokeLinejoin="round">
