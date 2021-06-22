@@ -8,12 +8,14 @@ const Outer = styled.div`
 	align-items: center;
 `;
 
-export const Logo: React.FC = () => {
+export const Logo: React.FC<{
+	size: number;
+}> = ({size}) => {
 	return (
 		<Outer>
-			<Triangle size={1100} opacity={0.2} />
-			<Triangle size={900} opacity={0.4} />
-			<Triangle size={700} opacity={1} />
+			<Triangle size={size} opacity={0.2} />
+			<Triangle size={(size * 9) / 11} opacity={0.4} />
+			<Triangle size={(size * 7) / 11} opacity={1} />
 		</Outer>
 	);
 };

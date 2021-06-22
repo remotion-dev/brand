@@ -7,6 +7,8 @@ const Container = styled.div`
 	justify-content: center;
 	flex: 1;
 	align-items: center;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;
 
 const Subtitle = styled.div`
@@ -23,6 +25,8 @@ const Subtitle = styled.div`
 	-webkit-text-fill-color: transparent;
 	-moz-text-fill-color: transparent;
 	text-fill-color: transparent;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;
 
 export const SocialPreview: React.FC = () => {

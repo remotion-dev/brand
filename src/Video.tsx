@@ -1,4 +1,5 @@
 import {Composition} from 'remotion';
+import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
 import {Monochromatic} from './Monochromatic';
@@ -7,6 +8,7 @@ import {Image2} from './ProductHuntImages/Image2';
 import {Image3} from './ProductHuntImages/Image3';
 import {ProductHuntLogo} from './ProductHuntLogo';
 import {SocialPreview} from './SocialPreview';
+import {Swirl} from './Swirl';
 
 export const RemotionVideo: React.FC = () => {
 	return (
@@ -18,6 +20,9 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={1}
 				id="Logo"
+				defaultProps={{
+					size: 1100,
+				}}
 			/>
 			<Composition
 				component={LogoWithTitle}
@@ -77,6 +82,27 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={1}
 				id="Monochromatic"
+			/>
+			<Composition
+				component={DynamicSocialPreview}
+				width={1200}
+				height={630}
+				fps={30}
+				durationInFrames={1}
+				id="DynamicSocialPreview"
+				defaultProps={{
+					title: 'Showcase uploader',
+					description:
+						'Upload and submit your videos to the Remotion showcase.',
+				}}
+			/>
+			<Composition
+				component={Swirl}
+				width={1200}
+				height={630}
+				fps={30}
+				durationInFrames={1}
+				id="Swirl"
 			/>
 		</>
 	);
