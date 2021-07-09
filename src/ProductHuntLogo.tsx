@@ -29,7 +29,7 @@ export const ProductHuntLogo: React.FC = () => {
 					transform: `scale(${scale(0)})`,
 				}}
 			>
-				<Triangle size={220} opacity={0.2}></Triangle>
+				<Triangle size={220} opacity={0.2} />
 			</AbsoluteFill>
 			<AbsoluteFill
 				style={{
@@ -37,7 +37,7 @@ export const ProductHuntLogo: React.FC = () => {
 					transform: `scale(${scale(1)})`,
 				}}
 			>
-				<Triangle size={180} opacity={0.4}></Triangle>
+				<Triangle size={180} opacity={0.4} />
 			</AbsoluteFill>
 			<AbsoluteFill
 				style={{
@@ -45,7 +45,7 @@ export const ProductHuntLogo: React.FC = () => {
 					transform: `scale(${scale(2)})`,
 				}}
 			>
-				<Triangle size={140} opacity={1}></Triangle>
+				<Triangle size={140} opacity={1} />
 			</AbsoluteFill>
 		</AbsoluteFill>
 	);
