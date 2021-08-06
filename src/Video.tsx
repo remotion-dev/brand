@@ -1,6 +1,6 @@
 import {getVideoMetadata, VideoMetadata} from '@remotion/media-utils';
 import {useEffect, useState} from 'react';
-import {Composition} from 'remotion';
+import {Composition, continueRender, delayRender} from 'remotion';
 import {ShowcaseVideo} from '../showcase-video';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
@@ -17,13 +17,17 @@ const muxId = 'J8H3dOuyC01ZurH9NnSvd17oS00FUPKns8HnTO02KyCF02k';
 // const muxId = 'zDEoYi6tII8cA017JrZpqyx1hf2ErMaPUklUSSkdkhKk';
 
 export const RemotionVideo: React.FC = () => {
+	const [handle] = useState(() => delayRender());
 	const [videoMetadata, setVideoMetadata] = useState<VideoMetadata | null>(
 		null
 	);
 
 	useEffect(() => {
 		getVideoMetadata(`https://stream.mux.com/${muxId}/high.mp4`)
-			.then((data) => setVideoMetadata(data))
+			.then((data) => {
+				setVideoMetadata(data);
+				continueRender(handle);
+			})
 			.catch((err) => {
 				console.log('could not get video metadata', err);
 			});
