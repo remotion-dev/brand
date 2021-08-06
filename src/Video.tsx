@@ -1,4 +1,7 @@
+import {getVideoMetadata, VideoMetadata} from '@remotion/media-utils';
+import {useEffect, useState} from 'react';
 import {Composition} from 'remotion';
+import {ShowcaseVideo} from '../showcase-video';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
@@ -10,7 +13,22 @@ import {ProductHuntLogo} from './ProductHuntLogo';
 import {SocialPreview} from './SocialPreview';
 import {Swirl} from './Swirl';
 
+const muxId = 'J8H3dOuyC01ZurH9NnSvd17oS00FUPKns8HnTO02KyCF02k';
+// const muxId = 'zDEoYi6tII8cA017JrZpqyx1hf2ErMaPUklUSSkdkhKk';
+
 export const RemotionVideo: React.FC = () => {
+	const [videoMetadata, setVideoMetadata] = useState<VideoMetadata | null>(
+		null
+	);
+
+	useEffect(() => {
+		getVideoMetadata(`https://stream.mux.com/${muxId}/high.mp4`)
+			.then((data) => setVideoMetadata(data))
+			.catch((err) => {
+				console.log('could not get video metadata', err);
+			});
+	}, []);
+
 	return (
 		<>
 			<Composition
@@ -103,6 +121,20 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={1}
 				id="Swirl"
+			/>
+			<Composition
+				component={ShowcaseVideo}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={Math.floor(
+					(videoMetadata?.durationInSeconds ?? 1) * 30
+				)}
+				id="showcase-video"
+				defaultProps={{
+					muxId,
+					videoMetadata,
+				}}
 			/>
 		</>
 	);

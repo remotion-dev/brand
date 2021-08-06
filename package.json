@@ -23,6 +23,7 @@
 	"dependencies": {
 		"@remotion/cli": "^2.0.0",
 		"@remotion/eslint-config": "^2.0.0",
+		"@remotion/media-utils": "^2.1.11",
 		"@types/react": "^17.0.0",
 		"@types/styled-components": "^5.1.7",
 		"eslint": "^7.15.0",
