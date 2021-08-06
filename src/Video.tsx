@@ -13,7 +13,7 @@ import {ProductHuntLogo} from './ProductHuntLogo';
 import {SocialPreview} from './SocialPreview';
 import {Swirl} from './Swirl';
 
-const muxId = 'J8H3dOuyC01ZurH9NnSvd17oS00FUPKns8HnTO02KyCF02k';
+const muxId = 'wvFXhgp3WA8bvp025y74gkoX56TKTyX7Xx9Qvos1TStc';
 // const muxId = 'zDEoYi6tII8cA017JrZpqyx1hf2ErMaPUklUSSkdkhKk';
 
 export const RemotionVideo: React.FC = () => {

@@ -41,7 +41,7 @@ export const calculateScale = ({
 	};
 };
 
-const margin = 50;
+const margin = 100;
 
 export const ShowcaseVideo: React.FC<{
 	muxId: string;
