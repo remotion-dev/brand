@@ -2,6 +2,7 @@ import {getVideoMetadata, VideoMetadata} from '@remotion/media-utils';
 import {useEffect, useState} from 'react';
 import {Composition, continueRender, delayRender} from 'remotion';
 import {ShowcaseVideo} from '../showcase-video';
+import {TwoPointFive} from './2-5';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
@@ -31,7 +32,7 @@ export const RemotionVideo: React.FC = () => {
 			.catch((err) => {
 				console.log('could not get video metadata', err);
 			});
-	}, []);
+	}, [handle]);
 
 	return (
 		<>
@@ -139,6 +140,14 @@ export const RemotionVideo: React.FC = () => {
 					muxId,
 					videoMetadata,
 				}}
+			/>
+			<Composition
+				component={TwoPointFive}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={450}
+				id="two-point-five"
 			/>
 		</>
 	);
