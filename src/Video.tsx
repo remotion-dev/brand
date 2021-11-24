@@ -6,14 +6,20 @@ import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
 import {Monochromatic} from './Monochromatic';
+import {JKL} from './Playback';
+import {ComboMoves} from './Playback/ComboMoves';
+import {Cursor} from './Playback/Cursor';
+import {Support} from './Playback/Support';
 import {Image1} from './ProductHuntImages/Image1';
 import {Image2} from './ProductHuntImages/Image2';
 import {Image3} from './ProductHuntImages/Image3';
 import {ProductHuntLogo} from './ProductHuntLogo';
+import {Showcase} from './Showcase';
 import {SocialPreview} from './SocialPreview';
 import {Swirl} from './Swirl';
+import {Vision} from './Vision';
 
-const muxId = 'wvFXhgp3WA8bvp025y74gkoX56TKTyX7Xx9Qvos1TStc';
+const muxId = 'GhK5YXKrtWTa2kEf7HajaE6DG2FtTNsZfW7mfIzQBJ00';
 // const muxId = 'zDEoYi6tII8cA017JrZpqyx1hf2ErMaPUklUSSkdkhKk';
 
 export const RemotionVideo: React.FC = () => {
@@ -31,7 +37,7 @@ export const RemotionVideo: React.FC = () => {
 			.catch((err) => {
 				console.log('could not get video metadata', err);
 			});
-	}, []);
+	}, [handle]);
 
 	return (
 		<>
@@ -125,6 +131,54 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={1}
 				id="Swirl"
+			/>
+			<Composition
+				component={Vision}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={1000}
+				id="Vision"
+			/>
+			<Composition
+				component={JKL}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={460}
+				id="Playback"
+			/>
+			<Composition
+				component={Cursor}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={300}
+				id="Cursor"
+			/>
+			<Composition
+				component={ComboMoves}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={300}
+				id="ComboMoves"
+			/>
+			<Composition
+				component={Support}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={100}
+				id="Support"
+			/>
+			<Composition
+				component={Showcase}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={300}
+				id="Showcase"
 			/>
 			<Composition
 				component={ShowcaseVideo}
