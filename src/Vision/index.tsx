@@ -72,6 +72,27 @@ const Code: React.FC = () => {
 	);
 };
 
+const Player: React.FC = () => {
+	return (
+		<svg
+			aria-hidden="true"
+			focusable="false"
+			data-prefix="fas"
+			data-icon="play"
+			className="svg-inline--fa fa-play fa-w-14"
+			role="img"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 448 512"
+			style={{height: 70, width: 70, marginBottom: 20}}
+		>
+			<path
+				fill={COLOR_2}
+				d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+			/>
+		</svg>
+	);
+};
+
 const Question: React.FC = () => {
 	return (
 		<svg
@@ -97,7 +118,7 @@ const Circle: React.FC<{
 	angle: number;
 	fatLabel: string;
 	thinLabel: string;
-	type: 'camera' | 'cli' | 'code' | 'question' | '';
+	type: 'camera' | 'cli' | 'code' | 'question' | 'play' | '';
 	index: number;
 }> = ({angle, fatLabel, thinLabel, type, index}) => {
 	const {fps, durationInFrames} = useVideoConfig();
@@ -137,6 +158,7 @@ const Circle: React.FC<{
 			{type === 'camera' ? <Renderer /> : null}
 			{type === 'cli' ? <Icon /> : null}
 			{type === 'code' ? <Code /> : null}
+			{type === 'play' ? <Player /> : null}
 			{type === 'question' ? <Question /> : null}
 			<div>
 				<div
@@ -165,9 +187,9 @@ const Circle: React.FC<{
 	);
 };
 
-const thinLabels = ['', '@remotion/', '@remotion/'];
-const fatLabels = ['remotion', 'cli', 'renderer'];
-const icons = ['camera', 'cli', 'code', 'question', 'question'] as const;
+const thinLabels = ['', '@remotion/', '@remotion/', '@remotion/'];
+const fatLabels = ['remotion', 'cli', 'renderer', 'player'];
+const icons = ['camera', 'cli', 'code', 'play', 'question'] as const;
 
 export const Vision: React.FC = () => {
 	return (

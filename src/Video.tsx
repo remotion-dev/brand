@@ -20,7 +20,7 @@ import {SocialPreview} from './SocialPreview';
 import {Swirl} from './Swirl';
 import {Vision} from './Vision';
 
-const muxId = 'GhK5YXKrtWTa2kEf7HajaE6DG2FtTNsZfW7mfIzQBJ00';
+const muxId = 'EV00V02hvNnfTYYYsTKtIzb7MfMAsZkSXQfDP001V1yC7I';
 // const muxId = 'zDEoYi6tII8cA017JrZpqyx1hf2ErMaPUklUSSkdkhKk';
 
 export const RemotionVideo: React.FC = () => {
