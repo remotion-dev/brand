@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
-export const Showcase = (props) => {
+export const Showcase: React.FC = (props) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const spr = React.useCallback(

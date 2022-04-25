@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {AbsoluteFill} from 'remotion';
-export const Support = (props) => {
+export const Support: React.FC = (props) => {
 	return (
 		<AbsoluteFill
 			style={{

@@ -7,7 +7,7 @@ import {
 	useVideoConfig,
 } from 'remotion';
 
-export const Cursor = (props) => {
+export const Cursor: React.FC = (props) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const forward = interpolate(frame, [0, 50], [-200, 200], {

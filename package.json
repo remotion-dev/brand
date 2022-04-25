@@ -16,7 +16,7 @@
 		"build-tutorial-graphics": "remotion render src/index.tsx TutorialGraphic tutorial-graphics --sequence --image-format=png --overwrite",
 		"build-monochromatic-logo": "remotion render src/index.tsx Monochromatic monochromatic --sequence --image-format=png --overwrite",
 		"upgrade": "npm upgrade @remotion/bundler @remotion/cli @remotion/eslint-config @remotion/renderer remotion",
-		"test": "eslint 'src' --ext ts,tsx"
+		"test": "eslint 'src' --ext ts,tsx && tsc"
 	},
 	"repository": {},
 	"license": "UNLICENSED",
