@@ -5,7 +5,6 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import SimplexNoise from 'simplex-noise';
 import {COLOR_1, COLOR_2} from '../colors';
 
 function point({
@@ -27,8 +26,6 @@ function point({
 	canvas.fill();
 	canvas.closePath();
 }
-
-const myNoise = new SimplexNoise('seed4');
 
 export const Swirl: React.FC = () => {
 	const ref = useRef<HTMLCanvasElement>(null);

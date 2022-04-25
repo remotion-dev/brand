@@ -5,13 +5,6 @@ import SimplexNoise from 'simplex-noise';
 export const TwoPointFive = (props: React.SVGProps<SVGSVGElement>) => {
 	const frame = useCurrentFrame();
 	const {fps, durationInFrames} = useVideoConfig();
-	const scale = spring({
-		frame,
-		fps,
-		config: {
-			damping: 200,
-		},
-	});
 
 	const seeds = React.useMemo(() => {
 		return new Array(7).fill(true).map((x, _i) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill} from 'remotion';
+import {AbsoluteFill, Img} from 'remotion';
 import editor from './editor.png';
 import preview from './preview.png';
 import {SmallLogo} from './SmallLogo';
@@ -29,7 +29,7 @@ export const Image1: React.FC = () => {
 				<BlackGradient>Preview with</BlackGradient>{' '}
 				<TitleRight>Fast Refresh</TitleRight>
 			</Title>
-			<img
+			<Img
 				src={editor}
 				style={{
 					width: 700,
@@ -38,7 +38,7 @@ export const Image1: React.FC = () => {
 					position: 'absolute',
 				}}
 			/>
-			<img
+			<Img
 				src={preview}
 				style={{
 					width: 700,

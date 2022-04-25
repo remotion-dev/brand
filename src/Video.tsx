@@ -21,7 +21,7 @@ import {Swirl} from './Swirl';
 import {Vision} from './Vision';
 
 const muxId = 'EV00V02hvNnfTYYYsTKtIzb7MfMAsZkSXQfDP001V1yC7I';
-// const muxId = 'zDEoYi6tII8cA017JrZpqyx1hf2ErMaPUklUSSkdkhKk';
+// Const muxId = 'zDEoYi6tII8cA017JrZpqyx1hf2ErMaPUklUSSkdkhKk';
 
 export const RemotionVideo: React.FC = () => {
 	const [handle] = useState(() => delayRender());
