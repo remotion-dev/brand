@@ -8,9 +8,7 @@ This repo includes the logo, logo with title, and a social preview image (when p
 
 ## With Title (Dark)
 
-<div style="background-color: green">
-<img src="withtitle-dark/element-0.png" />
-</div>
+![Logo with title](withtitle-dark/element-0.png)
 
 ## Without title
 
