@@ -17,3 +17,7 @@ This repo includes the logo, logo with title, and a social preview image (when p
 ## Social Preview
 
 ![Logo](socialpreview/element-0.png)
+
+## SVG Logo
+
+![Logo in SVG](logo.svg)
