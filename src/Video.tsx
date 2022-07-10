@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 import {Composition, continueRender, delayRender, Folder} from 'remotion';
 import {ShowcaseVideo} from '../showcase-video';
 import {TwoPointFive} from './2-5';
+import {ThreeOneFeatures} from './3-1';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
@@ -222,6 +223,14 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={450}
 				id="two-point-five"
+			/>
+			<Composition
+				component={ThreeOneFeatures}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={200}
+				id="three-one"
 			/>
 		</>
 	);
