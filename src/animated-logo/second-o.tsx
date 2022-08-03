@@ -82,11 +82,12 @@ export const SecondO: React.FC = () => {
 							transformBox: 'fill-box',
 							transformOrigin: 'center center',
 							transform: `translateX(${
-								Math.sin((i / filmRollDots) * Math.PI * 2) * 50
+								Math.sin((i / filmRollDots) * Math.PI * 2) *
+								(50 + (1 - dotScale) * 100)
 							}px) translateY(${
-								Math.cos((i / filmRollDots) * Math.PI * 2) * 50
-							}px) scale(${dotScale})`,
-							opacity: dotScale,
+								Math.cos((i / filmRollDots) * Math.PI * 2) *
+								(50 + (1 - dotScale) * 100)
+							}px) `,
 						}}
 					/>
 				);
