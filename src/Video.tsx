@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 import {Composition, continueRender, delayRender} from 'remotion';
 import {ShowcaseVideo} from '../showcase-video';
 import {TwoPointFive} from './2-5';
+import {AnimatedLogo} from './AnimatedLogo';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
@@ -202,6 +203,14 @@ export const RemotionVideo: React.FC = () => {
 				fps={30}
 				durationInFrames={450}
 				id="two-point-five"
+			/>
+			<Composition
+				component={AnimatedLogo}
+				width={1080}
+				height={1080}
+				fps={30}
+				durationInFrames={450}
+				id="animated-logo"
 			/>
 		</>
 	);
