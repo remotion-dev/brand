@@ -1,10 +1,13 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {E} from './animated-logo/e';
+import {FirstO} from './animated-logo/first-o';
+import {I} from './animated-logo/i';
 import {M} from './animated-logo/m';
 import {N} from './animated-logo/n';
 import {R} from './animated-logo/r';
 import {SecondO} from './animated-logo/second-o';
+import {T} from './animated-logo/t';
 
 export const AnimatedLogo: React.FC = () => {
 	return (
@@ -25,55 +28,14 @@ export const AnimatedLogo: React.FC = () => {
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
 			>
-				<path
-					d="M1341 421.5C1341 457.08 1312.96 485 1279.5 485C1246.04 485 1218 457.08 1218 421.5C1218 385.92 1246.04 358 1279.5 358C1312.96 358 1341 385.92 1341 421.5Z"
-					stroke="black"
-					strokeWidth="46"
-					style={{
-						opacity: 0,
-					}}
-				/>
-				<SecondO />
-				<M />
-				<N />
 				<R />
-				<path
-					d="M1410 315L1410 485"
-					stroke="black"
-					strokeWidth="46"
-					strokeLinecap="square"
-					style={{
-						opacity: 0,
-					}}
-				/>
-				<path
-					d="M1511 358L1511 485"
-					stroke="black"
-					strokeWidth="46"
-					strokeLinecap="square"
-					style={{
-						opacity: 0,
-					}}
-				/>
-				<path
-					d="M1410 358L1451 358"
-					stroke="black"
-					strokeWidth="46"
-					strokeLinecap="round"
-					style={{
-						opacity: 0,
-					}}
-				/>
 				<E />
-				<circle
-					cx="1510.5"
-					cy="293.5"
-					r="22.5"
-					fill="black"
-					style={{
-						opacity: 0,
-					}}
-				/>
+				<M />
+				<FirstO />
+				<T />
+				<I />
+				<SecondO />
+				<N />
 				<path
 					d="M235.44 233.13C228.453 233.509 222.824 234.617 217.15 236.776C214.321 237.841 209.683 240.16 207.13 241.764C196.454 248.459 188.316 258.522 184.071 270.234C183.225 272.553 180.936 279.948 179.463 285.038C169.647 319.064 164.075 356.27 162.88 395.65C162.69 401.921 162.69 416.856 162.88 423.026C163.682 449.133 166.176 472.702 170.697 496.738C172.535 506.466 175.481 519.534 177.187 525.47C180.673 537.532 187.791 547.8 197.913 555.326C204.695 560.372 212.395 563.756 220.928 565.418C225.041 566.221 230.466 566.585 234.462 566.323C239.99 565.958 250.958 564.485 259.869 562.895C300.036 555.734 337.14 542.914 370.788 524.566C392.096 512.942 410.313 500.355 427.888 485.085C445.404 469.887 460.339 453.537 473.48 435.19C476.529 430.945 478.06 428.466 479.591 425.345C483.529 417.294 485.382 409.287 485.367 400.332C485.367 391.989 483.792 384.58 480.394 376.996C478.76 373.335 477.199 370.71 473.699 365.722C460.806 347.359 446.498 331.359 429.055 315.812C402.014 291.718 369.898 271.955 334.034 257.326C326.26 254.161 318.603 251.376 309.385 248.357C289.871 241.983 265.718 236.455 245.284 233.699C242.076 233.261 237.715 233.013 235.44 233.13Z"
 					fill="#0B84F3"

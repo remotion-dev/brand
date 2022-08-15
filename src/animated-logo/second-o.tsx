@@ -5,17 +5,12 @@ const strokeWidth = 46;
 
 const filmRollDots = 5;
 
+export const secondODelay = 30;
+
 export const SecondO: React.FC = () => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
-	const spr = spring({
-		fps,
-		frame,
-		config: {
-			damping: 200,
-		},
-	});
 	const innerSpr = spring({
 		fps,
 		frame: frame - 7,
@@ -26,7 +21,7 @@ export const SecondO: React.FC = () => {
 
 	const devolve = spring({
 		fps,
-		frame: frame - 30,
+		frame: frame - secondODelay,
 		config: {damping: 200, mass: 0.7},
 	});
 
@@ -43,55 +38,63 @@ export const SecondO: React.FC = () => {
 	const rotate = interpolate(innerSpr, [0, 1], [0, -rotations * Math.PI * 2]);
 
 	return (
-		<g
-			style={{
-				transformBox: 'fill-box',
-				transformOrigin: 'center center',
-				transform: `translateX(${right}px) rotate(${rotate}rad)`,
-			}}
-		>
-			<circle
-				cx="1642.5"
-				cy="421.5"
-				r={r}
-				stroke="black"
-				fill="black"
+		<>
+			<g
 				style={{
 					transformBox: 'fill-box',
 					transformOrigin: 'center center',
+					transform: `translateX(${right}px) rotate(${rotate}rad)`,
+					mask: 'url(#cirmask)',
 				}}
-			/>
-			<circle
-				cx="1642.5"
-				cy="421.5"
-				r={secondR}
-				fill="white"
-				style={{
-					transformBox: 'fill-box',
-					transformOrigin: 'center center',
-				}}
-			/>
-			{new Array(filmRollDots).fill(true).map((f, i) => {
-				return (
-					<circle
-						cx="1642.5"
-						cy="421.5"
-						r={14}
-						fill="white"
-						style={{
-							transformBox: 'fill-box',
-							transformOrigin: 'center center',
-							transform: `translateX(${
-								Math.sin((i / filmRollDots) * Math.PI * 2) *
-								(50 + (1 - dotScale) * 100)
-							}px) translateY(${
-								Math.cos((i / filmRollDots) * Math.PI * 2) *
-								(50 + (1 - dotScale) * 100)
-							}px) `,
-						}}
-					/>
-				);
-			})}
-		</g>
+			>
+				<mask id="cirmask">
+					<circle cx="1642.5" cy="421.5" r={r} fill="white" />
+				</mask>
+				<circle
+					cx="1642.5"
+					cy="421.5"
+					r={r}
+					stroke="black"
+					fill="black"
+					style={{
+						transformBox: 'fill-box',
+						transformOrigin: 'center center',
+					}}
+				/>
+				<circle
+					cx="1642.5"
+					cy="421.5"
+					r={secondR}
+					fill="white"
+					style={{
+						transformBox: 'fill-box',
+						transformOrigin: 'center center',
+					}}
+				/>
+				<g>
+					{new Array(filmRollDots).fill(true).map((f, i) => {
+						return (
+							<circle
+								cx="1642.5"
+								cy="421.5"
+								r={14}
+								fill="white"
+								style={{
+									transformBox: 'fill-box',
+									transformOrigin: 'center center',
+									transform: `translateX(${
+										Math.sin((i / filmRollDots) * Math.PI * 2) *
+										(50 + (1 - dotScale) * 100)
+									}px) translateY(${
+										Math.cos((i / filmRollDots) * Math.PI * 2) *
+										(50 + (1 - dotScale) * 100)
+									}px) `,
+								}}
+							/>
+						);
+					})}
+				</g>
+			</g>
+		</>
 	);
 };

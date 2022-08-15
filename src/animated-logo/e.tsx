@@ -1,51 +1,72 @@
 import React from 'react';
-import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+
+import svg = require('svg-path-properties');
+// @ts-expect-error no types
+import reverse = require('svg-path-reverse');
+
+const d = reverse.reverse(
+	'M874 421.5C874 456.696 845.668 485 811 485C776.332 485 748 456.696 748 421.5C748 386.304 776.332 358 811 358C845.668 358 874 386.304 874 421.5Z'
+);
+
+const d1 = 'M896 421.5 L 764 421.5';
 
 export const E: React.FC = () => {
 	const {fps} = useVideoConfig();
 	const frame = useCurrentFrame();
 
-	const progress = spring({
+	const d1Progress = spring({
 		fps,
 		frame: frame - 2,
 		config: {
 			damping: 200,
 		},
+		durationInFrames: 6,
 	});
+
+	const progress = spring({
+		fps,
+		frame: frame - 8,
+		config: {
+			damping: 200,
+		},
+	});
+	const rotateProgress = spring({
+		fps,
+		frame: frame - 8,
+		config: {},
+	});
+
+	const pathProperties = new svg.svgPathProperties(d);
+
+	const length = pathProperties.getTotalLength();
+
+	const dash1PathProperties = new svg.svgPathProperties(d1);
+	const d1Length = dash1PathProperties.getTotalLength();
+
+	const d1StrokeDashArray = `${d1Length}`;
+	const d1StrokeDashoffset = d1Length - d1Length * d1Progress;
+
+	const strokeDashArray = `${length}`;
+	const strokeDashoffset = length - length * progress;
+
+	const rotate = interpolate(rotateProgress, [0, 1], [90, 0]);
 
 	return (
 		<g
 			style={{
 				transformBox: 'fill-box',
 				transformOrigin: 'center center',
+				transform: `translateX(0) rotate(${rotate}deg)`,
 			}}
 		>
-			<mask
-				id="mask0_108_2"
-				style={{
-					maskType: 'alpha',
-				}}
-				maskUnits="userSpaceOnUse"
-				x="725"
-				y="335"
-				width="172"
-				height="172"
-			>
-				<circle
-					cx="811"
-					cy="421"
-					r="66"
-					fill="black"
-					stroke="black"
-					strokeWidth="40"
-				/>
-			</mask>
-			<g mask="url(#mask0_108_2)">
-				<path
-					d="M742 403H888C900.703 403 911 413.297 911 426V436H742V403Z"
-					fill="black"
-				/>
-			</g>
+			<path
+				d={d1}
+				stroke="black"
+				strokeWidth={32}
+				strokeDasharray={d1StrokeDashArray}
+				strokeDashoffset={d1StrokeDashoffset}
+			/>
 			<mask
 				id="mask1_108_2"
 				style={{
@@ -64,7 +85,9 @@ export const E: React.FC = () => {
 			</mask>
 			<g mask="url(#mask1_108_2)">
 				<path
-					d="M874 421.5C874 456.696 845.668 485 811 485C776.332 485 748 456.696 748 421.5C748 386.304 776.332 358 811 358C845.668 358 874 386.304 874 421.5Z"
+					strokeDasharray={strokeDashArray}
+					strokeDashoffset={strokeDashoffset}
+					d={d}
 					stroke="black"
 					strokeWidth="46"
 				/>
