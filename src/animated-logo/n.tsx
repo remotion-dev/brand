@@ -11,7 +11,7 @@ export const N: React.FC = () => {
 
 	const progress = spring({
 		fps,
-		frame: frame - 35,
+		frame: frame - 16,
 	});
 
 	const length = svg.svgPathProperties(d).getTotalLength();

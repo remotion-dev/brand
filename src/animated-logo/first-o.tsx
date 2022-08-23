@@ -11,6 +11,7 @@ export const FirstO: React.FC = () => {
 		config: {
 			damping: 200,
 		},
+		durationInFrames: 16,
 	});
 
 	const xOffset = interpolate(progress, [0, 1], [1200, 0]);

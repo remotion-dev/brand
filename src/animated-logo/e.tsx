@@ -26,15 +26,13 @@ export const E: React.FC = () => {
 
 	const progress = spring({
 		fps,
-		frame: frame - 8,
-		config: {
-			damping: 200,
-		},
+		frame: frame - 4,
+		config: {damping: 200},
 	});
 	const rotateProgress = spring({
 		fps,
-		frame: frame - 8,
-		config: {},
+		frame: frame - 4,
+		config: {damping: 200},
 	});
 
 	const pathProperties = new svg.svgPathProperties(d);

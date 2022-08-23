@@ -19,7 +19,7 @@ export const I: React.FC = () => {
 
 	const progress = spring({
 		fps,
-		frame: frame - 20,
+		frame: frame - 16,
 		config: {
 			damping: 200,
 		},
