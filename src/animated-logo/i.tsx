@@ -43,7 +43,7 @@ export const I: React.FC = () => {
 			<circle
 				cx="1510.5"
 				cy="293.5"
-				r="22.5"
+				r="23"
 				fill="black"
 				style={{
 					transformOrigin: '50% 50%',
