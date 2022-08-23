@@ -1,5 +1,6 @@
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {springA} from './springs';
 import svg = require('svg-path-properties');
 // @ts-expect-error no types
 import reverse = require('svg-path-reverse');
@@ -18,10 +19,8 @@ export const M: React.FC = () => {
 
 	const prog1 = spring({
 		fps,
-		frame: frame - 4,
-		config: {
-			damping: 200,
-		},
+		frame: frame - springA.delay,
+		config: springA.config,
 	});
 	const bottom = interpolate(prog1, [0, 1], [700, 485 + 23]);
 	const length1 = svg.svgPathProperties(path1(bottom, middle)).getTotalLength();

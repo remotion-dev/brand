@@ -1,11 +1,10 @@
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {springB, springD} from './springs';
 
 const strokeWidth = 46;
 
 const filmRollDots = 5;
-
-export const secondODelay = 24;
 
 export const SecondO: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -13,18 +12,14 @@ export const SecondO: React.FC = () => {
 
 	const innerSpr = spring({
 		fps,
-		frame: frame - 4,
-		config: {
-			damping: 200,
-		},
+		frame: frame - springB.delay,
+		config: springB.config,
 	});
 
 	const devolve = spring({
 		fps,
-		frame: frame - secondODelay,
-		config: {
-			damping: 200,
-		},
+		frame: frame - springD.delay,
+		config: springD.config,
 	});
 
 	const secondR = interpolate(devolve, [0, 1], [0, 63.5 - strokeWidth / 2]);

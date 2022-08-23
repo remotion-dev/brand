@@ -1,5 +1,6 @@
 import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {springA} from './springs';
 import svg = require('svg-path-properties');
 
 const d = `M630 508
@@ -12,10 +13,8 @@ export const R: React.FC = () => {
 	const frame = useCurrentFrame();
 	const progress = spring({
 		fps,
-		frame,
-		config: {
-			damping: 200,
-		},
+		frame: frame - springA.delay,
+		config: springA.config,
 	});
 
 	const length = svg.svgPathProperties(d).getTotalLength();

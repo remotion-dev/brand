@@ -1,6 +1,6 @@
 import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {secondODelay} from './second-o';
+import {springC, springD} from './springs';
 import svg = require('svg-path-properties');
 
 const p1 = 'M1511 358L1511 485';
@@ -11,19 +11,14 @@ export const I: React.FC = () => {
 
 	const spr = spring({
 		fps,
-		frame: frame - secondODelay,
-		config: {
-			damping: 200,
-		},
+		frame: frame - springD.delay,
+		config: springD.config,
 	});
 
 	const progress = spring({
 		fps,
-		frame: frame - 16,
-		config: {
-			damping: 200,
-		},
-		durationInFrames: 10,
+		frame: frame - springC.delay,
+		config: springC.config,
 	});
 
 	const length1 = svg.svgPathProperties(p1).getTotalLength();

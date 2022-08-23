@@ -1,5 +1,6 @@
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {springA} from './springs';
 
 import svg = require('svg-path-properties');
 // @ts-expect-error no types
@@ -17,22 +18,19 @@ export const E: React.FC = () => {
 
 	const d1Progress = spring({
 		fps,
-		frame: frame - 2,
-		config: {
-			damping: 200,
-		},
-		durationInFrames: 6,
+		frame: frame - springA.delay,
+		config: springA.config,
 	});
 
 	const progress = spring({
 		fps,
-		frame: frame - 4,
-		config: {damping: 200},
+		frame: frame - springA.delay,
+		config: springA.config,
 	});
 	const rotateProgress = spring({
 		fps,
-		frame: frame - 4,
-		config: {damping: 200},
+		frame: frame - springA.delay,
+		config: springA.config,
 	});
 
 	const pathProperties = new svg.svgPathProperties(d);

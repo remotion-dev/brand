@@ -1,5 +1,6 @@
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {springA} from './springs';
 
 export const FirstO: React.FC = () => {
 	const {fps} = useVideoConfig();
@@ -7,14 +8,11 @@ export const FirstO: React.FC = () => {
 
 	const progress = spring({
 		fps,
-		frame,
-		config: {
-			damping: 200,
-		},
-		durationInFrames: 16,
+		frame: frame - springA.delay,
+		config: springA.config,
 	});
 
-	const xOffset = interpolate(progress, [0, 1], [1200, 0]);
+	const xOffset = interpolate(progress, [0, 1], [920, 0]);
 
 	const widthExtension = interpolate(progress, [0, 0.5, 1], [0, 300, 0]);
 
