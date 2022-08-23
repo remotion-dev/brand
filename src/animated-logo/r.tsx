@@ -2,7 +2,10 @@ import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import svg = require('svg-path-properties');
 
-const d = 'M630 485V415C630 383.52 655.52 358 687 358V358';
+const d = `M630 508
+V415
+C630 383.52 655.52 358 687 358
+h 16`;
 
 export const R: React.FC = () => {
 	const {fps} = useVideoConfig();
@@ -27,7 +30,6 @@ export const R: React.FC = () => {
 			strokeDashoffset={strokeDashoffset}
 			stroke="black"
 			strokeWidth="46"
-			strokeLinecap="square"
 		/>
 	);
 };
