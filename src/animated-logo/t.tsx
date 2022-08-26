@@ -1,11 +1,9 @@
 import React from 'react';
-import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {springB, springC} from './springs';
 import svg = require('svg-path-properties');
-// @ts-expect-error no types
-import reverse = require('svg-path-reverse');
 
-const d1 = reverse.reverse('M1410 292L1410 513');
+const d1 = 'M1410 292L1410 513';
 const d2 = 'M1410 358L1451 358';
 
 export const T: React.FC = () => {
@@ -39,9 +37,6 @@ export const T: React.FC = () => {
 				strokeWidth="46"
 				strokeDasharray={strokeDashArray}
 				strokeDashoffset={strokeDashoffset}
-				style={{
-					transform: `translateY(${interpolate(progress, [0, 1], [30, 0])}px)`,
-				}}
 			/>
 			<path
 				d="M1410 358L1451 358"

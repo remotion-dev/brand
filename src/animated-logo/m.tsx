@@ -4,7 +4,6 @@ import {springA} from './springs';
 import svg = require('svg-path-properties');
 // @ts-expect-error no types
 import reverse = require('svg-path-reverse');
-console.log(reverse);
 
 export const M: React.FC = () => {
 	const {fps} = useVideoConfig();

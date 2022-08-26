@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {Composition, continueRender, delayRender} from 'remotion';
 import {ShowcaseVideo} from '../showcase-video';
 import {TwoPointFive} from './2-5';
-import {AnimatedLogo} from './AnimatedLogo';
+import {AnimatedLogo} from './animated-logo/AnimatedLogo';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';

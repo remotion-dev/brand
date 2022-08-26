@@ -1,13 +1,13 @@
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
-import {E} from './animated-logo/e';
-import {FirstO} from './animated-logo/first-o';
-import {I} from './animated-logo/i';
-import {M} from './animated-logo/m';
-import {N} from './animated-logo/n';
-import {R} from './animated-logo/r';
-import {SecondO} from './animated-logo/second-o';
-import {T} from './animated-logo/t';
+import {E} from './e';
+import {FirstO} from './first-o';
+import {I} from './i';
+import {M} from './m';
+import {N} from './n';
+import {R} from './r';
+import {SecondO} from './second-o';
+import {T} from './t';
 
 export const AnimatedLogo: React.FC = () => {
 	return (
