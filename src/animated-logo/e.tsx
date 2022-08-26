@@ -22,17 +22,6 @@ export const E: React.FC = () => {
 		config: springA.config,
 	});
 
-	const progress = spring({
-		fps,
-		frame: frame - springA.delay,
-		config: springA.config,
-	});
-	const rotateProgress = spring({
-		fps,
-		frame: frame - springA.delay,
-		config: springA.config,
-	});
-
 	const pathProperties = new svg.svgPathProperties(d);
 
 	const length = pathProperties.getTotalLength();
@@ -44,9 +33,9 @@ export const E: React.FC = () => {
 	const d1StrokeDashoffset = d1Length - d1Length * d1Progress;
 
 	const strokeDashArray = `${length}`;
-	const strokeDashoffset = length - length * progress;
+	const strokeDashoffset = length - length * d1Progress;
 
-	const rotate = interpolate(rotateProgress, [0, 1], [90, 0]);
+	const rotate = interpolate(d1Progress, [0, 1], [90, 0]);
 
 	return (
 		<g
