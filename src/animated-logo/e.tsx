@@ -10,7 +10,7 @@ const d = reverse.reverse(
 	'M874 421.5C874 456.696 845.668 485 811 485C776.332 485 748 456.696 748 421.5C748 386.304 776.332 358 811 358C845.668 358 874 386.304 874 421.5Z'
 );
 
-const d1 = 'M896 421.5 L 764 421.5';
+const d1 = reverse.reverse('M896 421.5 L 764 421.5');
 
 export const E: React.FC = () => {
 	const {fps} = useVideoConfig();
@@ -22,6 +22,16 @@ export const E: React.FC = () => {
 		config: springA.config,
 	});
 
+	const lineProgress = interpolate(d1Progress, [0, 0.2], [0, 1], {
+		extrapolateRight: 'clamp',
+		extrapolateLeft: 'clamp',
+	});
+
+	const rotateProgress = interpolate(d1Progress, [0.2, 1], [0, 1], {
+		extrapolateRight: 'clamp',
+		extrapolateLeft: 'clamp',
+	});
+
 	const pathProperties = new svg.svgPathProperties(d);
 
 	const length = pathProperties.getTotalLength();
@@ -30,12 +40,12 @@ export const E: React.FC = () => {
 	const d1Length = dash1PathProperties.getTotalLength();
 
 	const d1StrokeDashArray = `${d1Length}`;
-	const d1StrokeDashoffset = d1Length - d1Length * d1Progress;
+	const d1StrokeDashoffset = d1Length - d1Length * lineProgress;
 
 	const strokeDashArray = `${length}`;
-	const strokeDashoffset = length - length * d1Progress;
+	const strokeDashoffset = length - length * rotateProgress;
 
-	const rotate = interpolate(d1Progress, [0, 1], [90, 0]);
+	const rotate = interpolate(rotateProgress, [0, 1], [90, 0]);
 
 	return (
 		<g

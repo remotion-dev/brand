@@ -1,9 +1,11 @@
 import {getVideoMetadata, VideoMetadata} from '@remotion/media-utils';
 import {useEffect, useState} from 'react';
-import {Composition, continueRender, delayRender} from 'remotion';
+import {Composition, continueRender, delayRender, Folder} from 'remotion';
 import {ShowcaseVideo} from '../showcase-video';
 import {TwoPointFive} from './2-5';
 import {AnimatedLogo} from './animated-logo/AnimatedLogo';
+import {Arcs} from './animated-logo/Arcs';
+import {FilmRoll} from './animated-logo/film-roll';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
@@ -204,14 +206,32 @@ export const RemotionVideo: React.FC = () => {
 				durationInFrames={450}
 				id="two-point-five"
 			/>
-			<Composition
-				component={AnimatedLogo}
-				width={1080}
-				height={1080}
-				fps={30}
-				durationInFrames={450}
-				id="animated-logo"
-			/>
+			<Folder name="NewLogo">
+				<Composition
+					component={FilmRoll}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={450}
+					id="film-roll"
+				/>
+				<Composition
+					component={AnimatedLogo}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={450}
+					id="animated-logo"
+				/>
+				<Composition
+					component={Arcs}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={450}
+					id="arcs"
+				/>
+			</Folder>
 		</>
 	);
 };

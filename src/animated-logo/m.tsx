@@ -21,12 +21,22 @@ export const M: React.FC = () => {
 		frame: frame - springA.delay,
 		config: springA.config,
 	});
-	const bottom = interpolate(prog1, [0, 1], [700, 485 + 23]);
+
+	const leftProg = interpolate(prog1, [0, 0.9], [0, 1], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp',
+	});
+	const rightProg = interpolate(prog1, [0.1, 1], [0, 1], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp',
+	});
+
+	const bottom = interpolate(leftProg, [0, 1], [700, 485 + 23]);
 	const length1 = svg.svgPathProperties(path1(bottom, middle)).getTotalLength();
 	const length2 = svg.svgPathProperties(path2(bottom, middle)).getTotalLength();
 
-	const offset1 = interpolate(prog1, [0, 1], [length1, 0]);
-	const offset2 = interpolate(prog1, [0, 1], [length2, 0]);
+	const offset1 = interpolate(leftProg, [0, 1], [length1, 0]);
+	const offset2 = interpolate(rightProg, [0, 1], [length2, 0]);
 
 	const stroke1Dasharray = `${length1 - offset1} ${offset1}`;
 

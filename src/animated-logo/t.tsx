@@ -3,7 +3,7 @@ import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {springB, springC} from './springs';
 import svg = require('svg-path-properties');
 
-const d1 = 'M1410 292L1410 513';
+const d1 = 'M1410 292L1410 509';
 const d2 = 'M1410 358L1451 358';
 
 export const T: React.FC = () => {
