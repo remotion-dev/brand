@@ -1,139 +1,63 @@
-import {interpolate, useCurrentFrame} from 'remotion';
+import {evolvePath, reversePath} from '@remotion/paths';
+import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {extendViewbox} from './extend-viewbox';
+
+const d = reversePath(
+	'M211.39 188.036C202.512 188.518 195.358 189.927 188.148 192.67C184.552 194.023 178.658 196.97 175.415 199.009C161.847 207.516 151.505 220.305 146.112 235.189C145.037 238.136 142.127 247.533 140.255 254.001C127.781 297.243 120.701 344.524 119.181 394.568C118.94 402.538 118.94 421.517 119.181 429.357C120.2 462.534 123.37 492.486 129.115 523.031C131.451 535.394 135.195 552.001 137.363 559.545C141.793 574.873 150.838 587.921 163.701 597.485C172.319 603.898 182.106 608.198 192.949 610.311C198.175 611.33 205.07 611.794 210.149 611.46C217.173 610.997 231.111 609.125 242.436 607.104C293.48 598.004 340.632 581.712 383.392 558.395C410.471 543.623 433.621 527.628 455.955 508.222C478.215 488.909 497.194 468.132 513.894 444.815C517.768 439.422 519.714 436.271 521.66 432.304C526.665 422.073 529.018 411.898 529 400.518C529 389.916 526.998 380.5 522.68 370.862C520.604 366.21 518.62 362.874 514.172 356.535C497.788 333.2 479.605 312.867 457.438 293.109C423.074 262.49 382.261 237.376 336.685 218.785C326.806 214.763 317.075 211.223 305.361 207.387C280.562 199.287 249.868 192.262 223.901 188.759C219.824 188.203 214.282 187.888 211.39 188.036Z'
+);
 
 export const Arcs: React.FC = () => {
 	const frame = useCurrentFrame();
-	const progress1 = interpolate(frame, [0, 100], [0, 1], {
-		extrapolateLeft: 'clamp',
-		extrapolateRight: 'clamp',
+	const {fps} = useVideoConfig();
+
+	const progress = spring({
+		frame,
+		fps,
+		config: {
+			damping: 200,
+		},
+		durationInFrames: 80,
 	});
-	const progress2 = interpolate(frame, [30, 120], [0, 1], {
-		extrapolateLeft: 'clamp',
-		extrapolateRight: 'clamp',
+	const viewBox = extendViewbox('118.94 187.888 410.078 423.906', 1.25);
+	const {strokeDasharray, strokeDashoffset} = evolvePath(progress, d);
+
+	const totalScale = spring({
+		fps,
+		frame: frame - 40,
+		config: {
+			damping: 200,
+		},
+		durationInFrames: 30,
 	});
 
 	return (
 		<svg
-			width="1080"
-			height="1080"
-			viewBox="0 0 1080 1080"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
+			style={{
+				transform: `scale(${
+					interpolate(totalScale, [0, 1], [1.15, 2.8]) +
+					interpolate(frame, [0, 250], [0, 1])
+				})`,
+				width: '100%',
+				left: '18%',
+				top: '28%',
+				position: 'absolute',
+			}}
+			viewBox={viewBox}
 		>
-			<g clipPath="url(#clip0_9_2)">
-				<g filter="url(#filter0_d_9_2)">
-					<path
-						d="M70.0708 -74.7021C120.649 196.82 515.72 572.643 1156.38 910.447"
-						stroke="url(#paint0_linear_9_2)"
-						strokeWidth="89.9167"
-						shapeRendering="crispEdges"
-					/>
-				</g>
-				<g filter="url(#filter1_d_9_2)">
-					<path
-						d="M835.861 203.393C629.777 453.394 415.916 655.36 237.6 780.052C148.205 842.563 69.6438 884.304 6.78505 903.743C-57.91 923.749 -95.0356 917.089 -114.147 901.335C-133.259 885.58 -146.881 850.408 -139.586 783.084C-132.498 717.671 -106.514 632.589 -62.2091 532.908C26.1669 334.076 183.616 85.6076 389.701 -164.393C595.785 -414.394 809.646 -616.36 987.962 -741.051C1077.36 -803.563 1155.92 -845.303 1218.78 -864.742C1283.47 -884.749 1320.6 -878.089 1339.71 -862.334C1358.82 -846.58 1372.44 -811.407 1365.15 -744.083C1358.06 -678.67 1332.08 -593.589 1287.77 -493.908C1199.4 -295.075 1041.95 -46.6073 835.861 203.393Z"
-						stroke="url(#paint1_linear_9_2)"
-						strokeWidth="79.2391"
-						shapeRendering="crispEdges"
-					/>
-				</g>
-			</g>
-			<defs>
-				<filter
-					id="filter0_d_9_2"
-					x="23.6248"
-					y="-82.9353"
-					width="1155.97"
-					height="1037.65"
-					filterUnits="userSpaceOnUse"
-					colorInterpolationFilters="sRGB"
-				>
-					<feFlood floodOpacity="0" result="BackgroundImageFix" />
-					<feColorMatrix
-						in="SourceAlpha"
-						type="matrix"
-						values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-						result="hardAlpha"
-					/>
-					<feOffset dy="2.24792" />
-					<feGaussianBlur stdDeviation="1.12396" />
-					<feComposite in2="hardAlpha" operator="out" />
-					<feColorMatrix
-						type="matrix"
-						values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-					/>
-					<feBlend
-						mode="normal"
-						in2="BackgroundImageFix"
-						result="effect1_dropShadow_9_2"
-					/>
-					<feBlend
-						mode="normal"
-						in="SourceGraphic"
-						in2="effect1_dropShadow_9_2"
-						result="shape"
-					/>
-				</filter>
-				<filter
-					id="filter1_d_9_2"
-					x="-258.175"
-					y="-991.508"
-					width="1741.91"
-					height="2026.51"
-					filterUnits="userSpaceOnUse"
-					colorInterpolationFilters="sRGB"
-				>
-					<feFlood floodOpacity="0" result="BackgroundImageFix" />
-					<feColorMatrix
-						in="SourceAlpha"
-						type="matrix"
-						values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-						result="hardAlpha"
-					/>
-					<feOffset dy="2.24792" />
-					<feGaussianBlur stdDeviation="38.4956" />
-					<feComposite in2="hardAlpha" operator="out" />
-					<feColorMatrix
-						type="matrix"
-						values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-					/>
-					<feBlend
-						mode="normal"
-						in2="BackgroundImageFix"
-						result="effect1_dropShadow_9_2"
-					/>
-					<feBlend
-						mode="normal"
-						in="SourceGraphic"
-						in2="effect1_dropShadow_9_2"
-						result="shape"
-					/>
-				</filter>
-				<linearGradient
-					id="paint0_linear_9_2"
-					x1="571.918"
-					y1="-147.714"
-					x2="571.918"
-					y2="942.075"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stopColor="#0B84F3" />
-					<stop offset="1" stopColor="#0B84F3" stopOpacity="0.52" />
-				</linearGradient>
-				<linearGradient
-					id="paint1_linear_9_2"
-					x1="1294.73"
-					y1="-144.472"
-					x2="-309.635"
-					y2="-195.201"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stopColor="#0B84F3" />
-					<stop offset="1" stopColor="#0B84F3" stopOpacity="0.46" />
-				</linearGradient>
-				<clipPath id="clip0_9_2">
-					<rect width="1080" height="1080" fill="white" />
-				</clipPath>
-			</defs>
+			<path
+				strokeDasharray={strokeDasharray}
+				strokeDashoffset={strokeDashoffset}
+				d={d}
+				stroke="#0B84F3"
+				fill="none"
+				strokeWidth={35}
+				style={{
+					transformBox: 'fill-box',
+					transformOrigin: 'center center',
+					transform: 'rotate(120deg)',
+				}}
+				strokeLinecap="round"
+			/>
 		</svg>
 	);
 };

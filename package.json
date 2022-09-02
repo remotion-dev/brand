@@ -24,6 +24,7 @@
 		"@remotion/cli": "^3.2.4",
 		"@remotion/eslint-config": "^3.2.4",
 		"@remotion/media-utils": "^3.2.4",
+		"@remotion/paths": "^3.2.12",
 		"@types/react": "^18.0.7",
 		"@types/styled-components": "^5.1.7",
 		"eslint": "^7.15.0",

@@ -4,6 +4,7 @@ import {Composition, continueRender, delayRender, Folder} from 'remotion';
 import {ShowcaseVideo} from '../showcase-video';
 import {TwoPointFive} from './2-5';
 import {AnimatedLogo} from './animated-logo/AnimatedLogo';
+import {AnimatedMaster} from './animated-logo/AnimatedMaster';
 import {Arcs} from './animated-logo/Arcs';
 import {FilmRoll} from './animated-logo/film-roll';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
@@ -230,6 +231,14 @@ export const RemotionVideo: React.FC = () => {
 					fps={30}
 					durationInFrames={450}
 					id="arcs"
+				/>
+				<Composition
+					component={AnimatedMaster}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={450}
+					id="animated-master"
 				/>
 			</Folder>
 		</>
