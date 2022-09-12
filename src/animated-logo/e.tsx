@@ -57,7 +57,7 @@ export const E: React.FC = () => {
 		>
 			<path
 				d={d1}
-				stroke="black"
+				stroke="currentcolor"
 				strokeWidth={32}
 				strokeDasharray={d1StrokeDashArray}
 				strokeDashoffset={d1StrokeDashoffset}
@@ -83,7 +83,7 @@ export const E: React.FC = () => {
 					strokeDasharray={strokeDashArray}
 					strokeDashoffset={strokeDashoffset}
 					d={d}
-					stroke="black"
+					stroke="currentcolor"
 					strokeWidth="46"
 				/>
 			</g>

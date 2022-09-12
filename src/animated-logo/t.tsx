@@ -33,14 +33,14 @@ export const T: React.FC = () => {
 		<>
 			<path
 				d={d1}
-				stroke="black"
+				stroke="currentcolor"
 				strokeWidth="46"
 				strokeDasharray={strokeDashArray}
 				strokeDashoffset={strokeDashoffset}
 			/>
 			<path
 				d="M1410 358L1451 358"
-				stroke="black"
+				stroke="currentcolor"
 				strokeWidth="46"
 				strokeLinecap="round"
 				strokeDasharray={strokeDashArray2}

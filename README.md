@@ -2,9 +2,13 @@
 
 This repo includes the logo, logo with title, and a social preview image (when posting on social media).
 
-## Animated Logo (Light)
+## Animated Logo on White
 
-![Animated Logo Light](animated-logo-light.gif)
+![Animated Logo Light](animated-logo-banner-light.gif)
+
+## Animated Logo for GitHub Dark mode
+
+![Animated Logo Light](animated-logo-banner-dark.gif)
 
 ## With Title (Light)
 

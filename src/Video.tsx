@@ -220,10 +220,32 @@ export const RemotionVideo: React.FC = () => {
 				<Composition
 					component={AnimatedLogo}
 					width={1080}
-					height={500}
+					height={1080}
 					fps={30}
 					durationInFrames={450}
 					id="animated-logo"
+				/>
+				<Composition
+					component={AnimatedLogo}
+					width={1080}
+					height={500}
+					fps={30}
+					durationInFrames={450}
+					id="animated-logo-banner-light"
+					defaultProps={{
+						theme: 'light' as const,
+					}}
+				/>
+				<Composition
+					component={AnimatedLogo}
+					width={1080}
+					height={500}
+					fps={30}
+					durationInFrames={450}
+					id="animated-logo-banner-dark"
+					defaultProps={{
+						theme: 'dark' as const,
+					}}
 				/>
 				<Composition
 					component={AnimatedLogoStringer}

@@ -23,7 +23,7 @@ export const FirstO: React.FC = () => {
 				y={359}
 				width={126 + widthExtension}
 				height={126}
-				stroke="black"
+				stroke="currentColor"
 				strokeWidth={46}
 				rx={63}
 			/>

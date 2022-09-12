@@ -27,7 +27,7 @@ export const R: React.FC = () => {
 			d={d}
 			strokeDasharray={strokeDashArray}
 			strokeDashoffset={strokeDashoffset}
-			stroke="black"
+			stroke="currentColor"
 			strokeWidth="46"
 		/>
 	);

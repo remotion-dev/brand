@@ -47,12 +47,12 @@ export const M: React.FC = () => {
 			<path
 				d={path1(bottom, middle)}
 				strokeDasharray={stroke1Dasharray}
-				stroke="black"
+				stroke="currentcolor"
 				strokeWidth="46"
 			/>
 			<path
 				d={path2(bottom, middle)}
-				stroke="black"
+				stroke="currentcolor"
 				strokeWidth="46"
 				strokeDasharray={stroke2Dasharray}
 			/>

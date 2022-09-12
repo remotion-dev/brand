@@ -24,7 +24,7 @@ export const N: React.FC = () => {
 	return (
 		<path
 			d={d}
-			stroke="black"
+			stroke="white"
 			strokeWidth="46"
 			strokeDasharray={strokeDashArray}
 			strokeDashoffset={strokeDashoffset}
