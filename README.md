@@ -2,6 +2,10 @@
 
 This repo includes the logo, logo with title, and a social preview image (when posting on social media).
 
+## Animated Logo (Light)
+
+![Animated Logo Light](animated-logo-light.gif)
+
 ## With Title (Light)
 
 ![Logo with title](withtitle/element-0.png)

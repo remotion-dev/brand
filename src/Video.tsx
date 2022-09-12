@@ -220,7 +220,7 @@ export const RemotionVideo: React.FC = () => {
 				<Composition
 					component={AnimatedLogo}
 					width={1080}
-					height={1080}
+					height={500}
 					fps={30}
 					durationInFrames={450}
 					id="animated-logo"

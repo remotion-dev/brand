@@ -17,7 +17,7 @@ import {T} from './t';
 
 export const AnimatedLogo: React.FC = () => {
 	const frame = useCurrentFrame();
-	const {fps, durationInFrames} = useVideoConfig();
+	const {fps} = useVideoConfig();
 
 	const spr = spring({
 		frame,
