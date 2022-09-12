@@ -35,7 +35,7 @@ export const I: React.FC = () => {
 					cx="1510.5"
 					cy="293.5"
 					r="22"
-					fill="white"
+					fill="currentcolor"
 					style={{
 						transformOrigin: '50% 50%',
 						transformBox: 'fill-box',
@@ -51,7 +51,7 @@ export const I: React.FC = () => {
 				strokeDasharray={strokeDashArray}
 				strokeDashoffset={strokeDashoffset}
 				d={p1}
-				stroke="white"
+				stroke="currentcolor"
 				strokeWidth="46"
 			/>
 		</g>

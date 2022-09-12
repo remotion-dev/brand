@@ -34,7 +34,7 @@ export const SecondO: React.FC = () => {
 					y={421.5 - 126 / 2}
 					width={126 + widthExtension}
 					height={126}
-					stroke="white"
+					stroke="currentcolor"
 					strokeWidth={46}
 					rx={63}
 				/>
