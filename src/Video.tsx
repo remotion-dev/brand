@@ -21,6 +21,8 @@ import {Image2} from './ProductHuntImages/Image2';
 import {Image3} from './ProductHuntImages/Image3';
 import {ProductHuntLogo} from './ProductHuntLogo';
 import {Showcase} from './Showcase';
+import {ShowcaseMaster} from './Showcase/Master';
+import {ShowcaseSubmit} from './Showcase/ShowcaseSubmit';
 import {SocialPreview} from './SocialPreview';
 import {Swirl} from './Swirl';
 import {Vision} from './Vision';
@@ -178,14 +180,32 @@ export const RemotionVideo: React.FC = () => {
 				durationInFrames={100}
 				id="Support"
 			/>
-			<Composition
-				component={Showcase}
-				width={1080}
-				height={1080}
-				fps={30}
-				durationInFrames={300}
-				id="Showcase"
-			/>
+			<Folder name="Showcase">
+				<Composition
+					component={ShowcaseMaster}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={150}
+					id="Master"
+				/>
+				<Composition
+					component={Showcase}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={150}
+					id="Showcase"
+				/>
+				<Composition
+					component={ShowcaseSubmit}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={150}
+					id="SubmitNow"
+				/>
+			</Folder>
 			<Composition
 				component={ShowcaseVideo}
 				width={1080}
