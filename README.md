@@ -2,9 +2,21 @@
 
 This repo includes the logo, logo with title, and a social preview image (when posting on social media).
 
-## With Title
+## Animated Logo on White
+
+![Animated Logo Light](animated-logo-banner-light.gif)
+
+## Animated Logo for GitHub Dark mode
+
+![Animated Logo Light](animated-logo-banner-dark.gif)
+
+## With Title (Light)
 
 ![Logo with title](withtitle/element-0.png)
+
+## With Title (Dark)
+
+![Logo with title](withtitle-dark/element-0.png)
 
 ## Without title
 
@@ -14,11 +26,6 @@ This repo includes the logo, logo with title, and a social preview image (when p
 
 ![Logo](socialpreview/element-0.png)
 
-## Development
+## SVG Logo
 
-The Remotion logo was built in Remotion, of course!
-
-```bash
-npm install
-npm run build
-```
+![Logo in SVG](logo.svg)

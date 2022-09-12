@@ -3,7 +3,11 @@ import {useEffect, useState} from 'react';
 import {Composition, continueRender, delayRender, Folder} from 'remotion';
 import {ShowcaseVideo} from '../showcase-video';
 import {TwoPointFive} from './2-5';
-import {ThreeOneFeatures} from './3-1';
+import {AnimatedLogo} from './animated-logo/AnimatedLogo';
+import {AnimatedLogoStringer} from './animated-logo/AnimatedLogoStinger';
+import {AnimatedMaster} from './animated-logo/AnimatedMaster';
+import {Arcs} from './animated-logo/Arcs';
+import {FilmRoll} from './animated-logo/film-roll';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
@@ -224,14 +228,70 @@ export const RemotionVideo: React.FC = () => {
 				durationInFrames={450}
 				id="two-point-five"
 			/>
-			<Composition
-				component={ThreeOneFeatures}
-				width={1080}
-				height={1080}
-				fps={30}
-				durationInFrames={200}
-				id="three-one"
-			/>
+			<Folder name="NewLogo">
+				<Composition
+					component={FilmRoll}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={450}
+					id="film-roll"
+				/>
+				<Composition
+					component={AnimatedLogo}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={450}
+					id="animated-logo"
+				/>
+				<Composition
+					component={AnimatedLogo}
+					width={1080}
+					height={500}
+					fps={30}
+					durationInFrames={450}
+					id="animated-logo-banner-light"
+					defaultProps={{
+						theme: 'light' as const,
+					}}
+				/>
+				<Composition
+					component={AnimatedLogo}
+					width={1080}
+					height={500}
+					fps={30}
+					durationInFrames={450}
+					id="animated-logo-banner-dark"
+					defaultProps={{
+						theme: 'dark' as const,
+					}}
+				/>
+				<Composition
+					component={AnimatedLogoStringer}
+					width={1920}
+					height={1080}
+					fps={30}
+					durationInFrames={80}
+					id="animated-logo-stinger"
+				/>
+				<Composition
+					component={Arcs}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={450}
+					id="arcs"
+				/>
+				<Composition
+					component={AnimatedMaster}
+					width={1080}
+					height={1080}
+					fps={30}
+					durationInFrames={450}
+					id="animated-master"
+				/>
+			</Folder>
 		</>
 	);
 };
