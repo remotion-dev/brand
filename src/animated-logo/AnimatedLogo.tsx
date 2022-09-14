@@ -17,7 +17,8 @@ import {T} from './t';
 
 export const AnimatedLogo: React.FC<{
 	theme: 'light' | 'dark';
-}> = ({theme}) => {
+	scaleLogo?: boolean;
+}> = ({theme, scaleLogo}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -63,7 +64,12 @@ export const AnimatedLogo: React.FC<{
 					fill={theme === 'dark' ? 'white' : '#0B84F3'}
 					fillOpacity="0.3"
 					style={{
-						transform: `translateX(${translateX}px)`,
+						transformBox: 'fill-box',
+						transformOrigin: 'center center',
+
+						transform: scaleLogo
+							? `scale(${spr})`
+							: `translateX(${translateX}px)`,
 					}}
 				/>
 				<path
@@ -71,14 +77,23 @@ export const AnimatedLogo: React.FC<{
 					fill={theme === 'dark' ? 'white' : '#0B84F3'}
 					fillOpacity="0.15"
 					style={{
-						transform: `translateX(${translateX}px)`,
+						transformBox: 'fill-box',
+						transformOrigin: 'center center',
+
+						transform: scaleLogo
+							? `scale(${spr})`
+							: `translateX(${translateX}px)`,
 					}}
 				/>
 				<path
 					d="M260.331 279.901C255.307 280.174 251.259 280.971 247.179 282.523C245.144 283.289 241.809 284.956 239.973 286.11C232.295 290.924 226.443 298.162 223.391 306.584C222.782 308.252 221.136 313.569 220.076 317.23C213.017 341.7 209.011 368.456 208.151 396.776C208.014 401.286 208.014 412.026 208.151 416.463C208.727 435.237 210.521 452.187 213.773 469.472C215.094 476.468 217.213 485.866 218.44 490.135C220.947 498.809 226.065 506.193 233.344 511.605C238.221 515.234 243.759 517.667 249.895 518.863C252.853 519.44 256.755 519.702 259.629 519.513C263.604 519.251 271.491 518.192 277.9 517.049C306.786 511.899 333.469 502.679 357.666 489.484C372.99 481.125 386.09 472.073 398.729 461.092C411.326 450.163 422.066 438.405 431.516 425.21C433.708 422.158 434.81 420.375 435.911 418.13C438.743 412.341 440.075 406.582 440.064 400.142C440.064 394.143 438.932 388.815 436.488 383.361C435.313 380.728 434.191 378.84 431.673 375.253C422.402 362.048 412.112 350.542 399.568 339.361C380.122 322.034 357.026 307.822 331.235 297.302C325.644 295.026 320.138 293.022 313.509 290.851C299.475 286.268 282.106 282.292 267.411 280.31C265.104 279.995 261.968 279.817 260.331 279.901Z"
 					fill={theme === 'dark' ? 'white' : '#0B84F3'}
 					style={{
-						transform: `translateX(${translateX}px)`,
+						transformBox: 'fill-box',
+						transformOrigin: 'center center',
+						transform: scaleLogo
+							? `scale(${spr})`
+							: `translateX(${translateX}px)`,
 					}}
 				/>
 			</svg>

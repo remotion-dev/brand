@@ -9,6 +9,7 @@ import {AnimatedMaster} from './animated-logo/AnimatedMaster';
 import {Arcs} from './animated-logo/Arcs';
 import {FilmRoll} from './animated-logo/film-roll';
 import {DynamicSocialPreview} from './DynamicSocialPreview';
+import {EmailSignature} from './EmailSignature';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
 import {Monochromatic} from './Monochromatic';
@@ -255,6 +256,14 @@ export const RemotionVideo: React.FC = () => {
 					defaultProps={{
 						theme: 'light' as const,
 					}}
+				/>
+				<Composition
+					component={EmailSignature}
+					width={500}
+					height={160}
+					fps={30}
+					durationInFrames={50}
+					id="email-signature"
 				/>
 				<Composition
 					component={AnimatedLogo}
