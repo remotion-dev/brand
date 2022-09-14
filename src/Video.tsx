@@ -262,7 +262,7 @@ export const RemotionVideo: React.FC = () => {
 					width={500}
 					height={160}
 					fps={30}
-					durationInFrames={50}
+					durationInFrames={75}
 					id="email-signature"
 				/>
 				<Composition
