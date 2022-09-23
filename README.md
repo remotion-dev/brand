@@ -26,7 +26,7 @@ This repo includes the logo, logo with title, and a social preview image (when p
 
 ![Logo](withouttitle/element-0.png)
 
-## Without title
+## Without title (Light)
 
 ![Logo](logowhite/element-0.png)
 
