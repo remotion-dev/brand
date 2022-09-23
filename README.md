@@ -24,8 +24,10 @@ This repo includes the logo, logo with title, and a social preview image (when p
 
 ## Without title (Light)
 
-<img src="logowhite/element-0.png" style="background-color: #222">
+<div style="background: #222">
+<img src="logowhite/element-0.png" >
 </img>
+</div>
 
 ## Social Preview
 
