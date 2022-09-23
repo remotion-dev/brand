@@ -62,6 +62,18 @@ export const RemotionVideo: React.FC = () => {
 				}}
 			/>
 			<Composition
+				component={Logo}
+				width={820}
+				height={820}
+				fps={30}
+				durationInFrames={1}
+				id="LogoWhite"
+				defaultProps={{
+					color: 'white',
+					size: 1100,
+				}}
+			/>
+			<Composition
 				component={LogoWithTitle}
 				width={2100}
 				height={1080}

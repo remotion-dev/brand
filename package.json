@@ -8,6 +8,7 @@
 		"build-without-title": "remotion render src/index.tsx Logo withouttitle --sequence --image-format=png --overwrite",
 		"build-with-title": "remotion render src/index.tsx LogoWithTitle withtitle --sequence --image-format=png --overwrite",
 		"build-social-preview": "remotion render src/index.tsx SocialPreview socialpreview --sequence --image-format=png --overwrite",
+		"build-white-logo": "remotion still src/index.tsx LogoWhite logowhite/element-0.png",
 		"build-product-hunt": "remotion render src/index.tsx ProductHunt producthunt.mp4 --overwrite",
 		"build-banner-1": "remotion render src/index.tsx Image1 banner-1 --sequence --image-format=png --overwrite",
 		"build-banner-2": "remotion render src/index.tsx Image2 banner-2 --sequence --image-format=png --overwrite",

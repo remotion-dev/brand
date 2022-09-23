@@ -39,7 +39,7 @@ export const Swirl: React.FC = () => {
 		}
 		ctx.clearRect(0, 0, width, height);
 		const start = 110;
-		const end = width - 360;
+		const end = width - 450;
 		for (let i = start; i < end; i++) {
 			const swirlProgress = interpolate(i, [start, end], [0, 1], {});
 			const swirl = interpolate(swirlProgress, [0, 1], [0, Math.PI * 23]);
