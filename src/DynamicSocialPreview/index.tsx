@@ -6,9 +6,7 @@ import {Swirl} from '../Swirl';
 const Container = styled.div`
 	flex: 1;
 	padding: 100px;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	background-image: radial-gradient();
+	font-family: GT Planar;
 `;
 
 const Title = styled.h1`
@@ -19,7 +17,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-	color: #61778a;
+	color: #444;
 	font-size: 3.2em;
 	margin: 0;
 	margin-top: 20px;
@@ -31,18 +29,11 @@ const Description = styled.p`
 	text-overflow: ellipsis;
 	line-clamp: 2;
 	box-orient: vertical;
+	font-family: SF Pro;
 `;
 
 const GradientText = styled.span`
-	background: linear-gradient(to right, black, #666);
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-moz-text-fill-color: transparent;
-	text-fill-color: transparent;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: GT Planar;
 `;
 
 export const DynamicSocialPreview: React.FC<{
@@ -75,8 +66,8 @@ export const DynamicSocialPreview: React.FC<{
 							textAlign: 'right',
 						}}
 					>
-						Write videos <br />
-						in React.
+						Make videos <br />
+						programmatically.
 					</div>
 				</Container>
 			</AbsoluteFill>
