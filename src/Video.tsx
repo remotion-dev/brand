@@ -11,6 +11,7 @@ import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
 import {ProductHuntLogo} from './ScalingLogo';
 import {ShowcaseVideo} from './showcase-video';
+import {UpperThird} from './UpperThird';
 import {LowerReference} from './video-elements/lower-reference';
 
 const muxId = 'EV00V02hvNnfTYYYsTKtIzb7MfMAsZkSXQfDP001V1yC7I';
@@ -169,6 +170,14 @@ export const RemotionVideo: React.FC = () => {
 				<Composition
 					id="lower-third-reference"
 					component={LowerReference}
+					durationInFrames={5 * 30}
+					fps={30}
+					width={1920}
+					height={1080}
+				/>
+				<Composition
+					id="upper-third"
+					component={UpperThird}
 					durationInFrames={5 * 30}
 					fps={30}
 					width={1920}
