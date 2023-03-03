@@ -1,5 +1,6 @@
 import {mix} from 'polished';
 import {useVideoConfig} from 'remotion';
+import {BLUE} from './colors';
 
 export const Arc: React.FC<{
 	progress: number;
@@ -25,8 +26,8 @@ export const Arc: React.FC<{
 		>
 			<defs>
 				<linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%">
-					<stop stopColor={mix(0.8, '#fff', '#42e9f5')} offset="0" />
-					<stop stopColor={mix(0.8, '#fff', '#4290f5')} offset="100%" />
+					<stop stopColor={mix(0.8, '#fff', BLUE)} offset="0" />
+					<stop stopColor={mix(0.8, '#fff', BLUE)} offset="100%" />
 				</linearGradient>
 			</defs>
 			<ellipse

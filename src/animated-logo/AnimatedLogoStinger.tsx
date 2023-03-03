@@ -39,7 +39,7 @@ export const AnimatedLogoStringer: React.FC = () => {
 					}}
 				>
 					<Sequence from={5}>
-						<AnimatedLogo></AnimatedLogo>
+						<AnimatedLogo theme="light" />
 					</Sequence>
 				</AbsoluteFill>
 			</TriangleEntrance>

@@ -14,7 +14,7 @@ export const AnimatedMaster: React.FC = () => {
 				<Arcs />
 			</Sequence>
 			<Sequence from={108}>
-				<AnimatedLogo />
+				<AnimatedLogo theme="light" />
 			</Sequence>
 		</AbsoluteFill>
 	);

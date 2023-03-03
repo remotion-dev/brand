@@ -29,6 +29,7 @@
 		"@remotion/paths": "3.3.61",
 		"@types/react": "^18.0.7",
 		"@types/styled-components": "^5.1.7",
+		"@types/web": "^0.0.93",
 		"eslint": "^7.15.0",
 		"hack-font": "^3.3.0",
 		"polished": "^4.1.3",

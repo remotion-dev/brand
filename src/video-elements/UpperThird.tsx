@@ -7,6 +7,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
+import {BLUE} from '../colors';
 
 export const UpperThird: React.FC = () => {
 	const frame = useCurrentFrame();
@@ -68,7 +69,7 @@ export const UpperThird: React.FC = () => {
 						fontSize: '1.8em',
 						marginTop: 0,
 						marginBottom: 0,
-						color: '#4290F5',
+						color: BLUE,
 					}}
 				>
 					reactsummit.com
