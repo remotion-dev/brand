@@ -13,6 +13,7 @@ import {ProductHuntLogo} from './ScalingLogo';
 import {ShowcaseVideo} from './showcase-video';
 import {LowerReference} from './video-elements/lower-reference';
 import {NumberedChapter} from './video-elements/numbered-chapter';
+import {UpperReference} from './video-elements/upper-reference';
 import {UpperThird} from './video-elements/UpperThird';
 
 const muxId = 'EV00V02hvNnfTYYYsTKtIzb7MfMAsZkSXQfDP001V1yC7I';
@@ -177,6 +178,14 @@ export const RemotionVideo: React.FC = () => {
 					height={1080}
 				/>
 				<Composition
+					id="upper-third-reference"
+					component={UpperReference}
+					durationInFrames={5 * 30}
+					fps={30}
+					width={1920}
+					height={1080}
+				/>
+				<Composition
 					id="upper-third"
 					component={UpperThird}
 					durationInFrames={5 * 30}
@@ -187,7 +196,7 @@ export const RemotionVideo: React.FC = () => {
 				<Composition
 					id="numbered-chapter"
 					component={NumberedChapter}
-					durationInFrames={45}
+					durationInFrames={36}
 					fps={30}
 					width={1920}
 					height={1080}

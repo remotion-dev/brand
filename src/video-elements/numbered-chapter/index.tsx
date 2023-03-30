@@ -59,7 +59,7 @@ export const NumberedChapter: React.FC = () => {
 						translate: `0 ${-jump2 * 50}px`,
 					}}
 				>
-					1
+					5
 				</div>
 			</AbsoluteFill>
 			<AbsoluteFill
@@ -72,7 +72,7 @@ export const NumberedChapter: React.FC = () => {
 					opacity: jump2,
 				}}
 			>
-				<h2>Audio codecs</h2>
+				<h2>Transformations</h2>
 			</AbsoluteFill>
 		</AbsoluteFill>
 	);
