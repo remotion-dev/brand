@@ -12,6 +12,7 @@ import {LogoWithTitle} from './LogoWithTitle';
 import {ProductHuntLogo} from './ScalingLogo';
 import {ShowcaseVideo} from './showcase-video';
 import {LowerReference} from './video-elements/lower-reference';
+import {MoneyBurn} from './video-elements/money-burn';
 import {NumberedChapter} from './video-elements/numbered-chapter';
 import {UpperReference} from './video-elements/upper-reference';
 import {UpperThird} from './video-elements/UpperThird';
@@ -196,6 +197,14 @@ export const RemotionVideo: React.FC = () => {
 				<Composition
 					id="numbered-chapter"
 					component={NumberedChapter}
+					durationInFrames={36}
+					fps={30}
+					width={1920}
+					height={1080}
+				/>
+				<Composition
+					id="money-burn"
+					component={MoneyBurn}
 					durationInFrames={36}
 					fps={30}
 					width={1920}

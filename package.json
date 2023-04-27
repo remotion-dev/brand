@@ -24,6 +24,7 @@
 	"dependencies": {
 		"@remotion/cli": "3.3.61",
 		"@remotion/eslint-config": "3.3.61",
+		"@remotion/google-fonts": "3.3.61",
 		"@remotion/media-utils": "3.3.61",
 		"@remotion/noise": "^3.3.61",
 		"@remotion/paths": "3.3.61",
