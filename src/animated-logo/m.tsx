@@ -5,7 +5,9 @@ import svg = require('svg-path-properties');
 // @ts-expect-error no types
 import reverse = require('svg-path-reverse');
 
-export const M: React.FC = () => {
+export const M: React.FC<{
+	style?: React.CSSProperties;
+}> = ({style}) => {
 	const {fps} = useVideoConfig();
 	const frame = useCurrentFrame();
 	const middle = 485 + 23;
@@ -43,7 +45,7 @@ export const M: React.FC = () => {
 	const stroke2Dasharray = `${length2 - offset2} ${offset2} `;
 
 	return (
-		<>
+		<g style={style}>
 			<path
 				d={path1(bottom, middle)}
 				strokeDasharray={stroke1Dasharray}
@@ -56,6 +58,6 @@ export const M: React.FC = () => {
 				strokeWidth="46"
 				strokeDasharray={stroke2Dasharray}
 			/>
-		</>
+		</g>
 	);
 };

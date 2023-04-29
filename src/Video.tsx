@@ -5,6 +5,7 @@ import {AnimatedLogo} from './animated-logo/AnimatedLogo';
 import {AnimatedLogoStringer} from './animated-logo/AnimatedLogoStinger';
 import {AnimatedMaster} from './animated-logo/AnimatedMaster';
 import {Arcs} from './animated-logo/Arcs';
+import {ExplodingLogo} from './animated-logo/ExplodingLogo';
 import {FilmRoll} from './animated-logo/film-roll';
 import {EmailSignature} from './EmailSignature';
 import {Logo} from './Logo';
@@ -167,6 +168,14 @@ export const RemotionVideo: React.FC = () => {
 					defaultProps={{
 						yOffset: 0,
 					}}
+				/>
+				<Composition
+					component={ExplodingLogo}
+					width={2100}
+					height={2100}
+					fps={30}
+					durationInFrames={200}
+					id="ExplodingLogo"
 				/>
 			</Folder>
 			<Folder name="video-elements">

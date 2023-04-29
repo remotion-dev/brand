@@ -2,7 +2,9 @@ import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {springB} from './springs';
 
-export const SecondO: React.FC = () => {
+export const SecondO: React.FC<{
+	style?: React.CSSProperties;
+}> = ({style}) => {
 	const innerSpr = 1;
 
 	const frame = useCurrentFrame();
@@ -21,7 +23,7 @@ export const SecondO: React.FC = () => {
 	const widthExtension = interpolate(progress, [0, 0.5, 1], [0, 300, 0]);
 
 	return (
-		<>
+		<g style={style}>
 			<g
 				style={{
 					transformBox: 'fill-box',
@@ -39,6 +41,6 @@ export const SecondO: React.FC = () => {
 					rx={63}
 				/>
 			</g>
-		</>
+		</g>
 	);
 };

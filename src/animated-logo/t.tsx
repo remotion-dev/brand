@@ -6,7 +6,9 @@ import svg = require('svg-path-properties');
 const d1 = 'M1410 292L1410 509';
 const d2 = 'M1410 358L1451 358';
 
-export const T: React.FC = () => {
+export const T: React.FC<{
+	style?: React.CSSProperties;
+}> = ({style}) => {
 	const {fps} = useVideoConfig();
 	const frame = useCurrentFrame();
 
@@ -30,7 +32,7 @@ export const T: React.FC = () => {
 	const strokeDashoffset2 = length2 - length2 * progress2;
 
 	return (
-		<>
+		<g style={style}>
 			<path
 				d={d1}
 				stroke="currentcolor"
@@ -46,6 +48,6 @@ export const T: React.FC = () => {
 				strokeDasharray={strokeDashArray2}
 				strokeDashoffset={strokeDashoffset2}
 			/>
-		</>
+		</g>
 	);
 };

@@ -7,7 +7,9 @@ import reverse = require('svg-path-reverse');
 
 const p1 = reverse.reverse('M1511 335 L1511 508');
 
-export const I: React.FC = () => {
+export const I: React.FC<{
+	style?: React.CSSProperties;
+}> = ({style}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
@@ -29,7 +31,7 @@ export const I: React.FC = () => {
 	const strokeDashoffset = length1 - length1 * sprProgress;
 
 	return (
-		<g>
+		<g style={style}>
 			{iPointProgress > 0 && (
 				<circle
 					cx="1510.5"

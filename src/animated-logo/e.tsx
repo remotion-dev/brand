@@ -12,7 +12,9 @@ const d = reverse.reverse(
 
 const d1 = reverse.reverse('M896 421.5 L 764 421.5');
 
-export const E: React.FC = () => {
+export const E: React.FC<{
+	style?: React.CSSProperties;
+}> = ({style = {}}) => {
 	const {fps} = useVideoConfig();
 	const frame = useCurrentFrame();
 
@@ -50,6 +52,7 @@ export const E: React.FC = () => {
 	return (
 		<g
 			style={{
+				...style,
 				transformBox: 'fill-box',
 				transformOrigin: 'center center',
 				transform: `translateX(0) rotate(${rotate}deg)`,
