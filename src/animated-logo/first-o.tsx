@@ -37,7 +37,7 @@ export const FirstO: React.FC<{
 			<circle
 				cx={1216 + xOffset + width / 2}
 				cy={359 + width / 2}
-				fill="white"
+				fill="transparent"
 				r={40 * innerScale}
 			/>
 		</g>

@@ -37,7 +37,6 @@ export const AnimatedLogo: React.FC<{
 			style={{
 				justifyContent: 'center',
 				alignItems: 'center',
-				backgroundColor: theme === 'dark' ? '#22272e' : 'white',
 				color: theme === 'dark' ? 'white' : 'black',
 			}}
 		>
