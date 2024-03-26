@@ -6,7 +6,7 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {getBackground, getColor, Theme} from './colors';
+import {getColor, Theme} from './colors';
 
 const O: React.FC = () => {
 	return (
@@ -263,40 +263,43 @@ export const Recorder: React.FC<{
 	theme: Theme;
 }> = ({theme}) => {
 	return (
-		<AbsoluteFill style={{overflow: 'visible', color: getColor(theme)}}>
-			<FromRight delay={0}>
-				<R1 />
-			</FromRight>
-			<FromRight delay={1}>
-				<E />
-			</FromRight>
-			<FromRight delay={2}>
-				<C />
-			</FromRight>
-			<FromRight delay={3}>
-				<O />
-			</FromRight>
-			<FromRight delay={4}>
-				<R2 />
-			</FromRight>
-			<FromRight delay={5}>
-				<D />
-			</FromRight>
-			<FromRight delay={6}>
-				<E2 />
-			</FromRight>
-			<FromRight delay={7}>
-				<R3 />
-			</FromRight>
-			<AbsoluteFill
-				style={{
-					backgroundImage: `linear-gradient(transparent 58%, ${getBackground(
-						theme
-					)} 74%)`,
-					width: '160%',
-					height: '100.2%',
-				}}
-			/>
+		<AbsoluteFill
+			style={{
+				maskImage: `linear-gradient(black 58%, transparent 74%)`,
+			}}
+		>
+			<AbsoluteFill style={{overflow: 'visible', color: getColor(theme)}}>
+				<FromRight delay={0}>
+					<R1 />
+				</FromRight>
+				<FromRight delay={1}>
+					<E />
+				</FromRight>
+				<FromRight delay={2}>
+					<C />
+				</FromRight>
+				<FromRight delay={3}>
+					<O />
+				</FromRight>
+				<FromRight delay={4}>
+					<R2 />
+				</FromRight>
+				<FromRight delay={5}>
+					<D />
+				</FromRight>
+				<FromRight delay={6}>
+					<E2 />
+				</FromRight>
+				<FromRight delay={7}>
+					<R3 />
+				</FromRight>
+				<AbsoluteFill
+					style={{
+						width: '160%',
+						height: '100.2%',
+					}}
+				/>
+			</AbsoluteFill>
 		</AbsoluteFill>
 	);
 };
