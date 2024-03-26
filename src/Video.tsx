@@ -7,6 +7,9 @@ import {AnimatedMaster} from './animated-logo/AnimatedMaster';
 import {Arcs} from './animated-logo/Arcs';
 import {ExplodingLogo} from './animated-logo/ExplodingLogo';
 import {FilmRoll} from './animated-logo/film-roll';
+import {Banner} from './Brand/Banner';
+import {Comp} from './Brand/Composition';
+import {TriangleDemo} from './Brand/TriangleToSquare';
 import {EmailSignature} from './EmailSignature';
 import {Logo} from './Logo';
 import {LogoWithTitle} from './LogoWithTitle';
@@ -78,6 +81,9 @@ export const RemotionVideo: React.FC = () => {
 					fps={30}
 					durationInFrames={450}
 					id="animated-logo"
+					defaultProps={{
+						theme: 'light',
+					}}
 				/>
 				<Composition
 					component={AnimatedLogo}
@@ -176,6 +182,9 @@ export const RemotionVideo: React.FC = () => {
 					fps={30}
 					durationInFrames={200}
 					id="ExplodingLogo"
+					defaultProps={{
+						theme: 'light',
+					}}
 				/>
 			</Folder>
 			<Folder name="video-elements">
@@ -218,6 +227,61 @@ export const RemotionVideo: React.FC = () => {
 					fps={30}
 					width={1920}
 					height={1080}
+				/>
+			</Folder>
+			<Folder name="recorder">
+				<Composition
+					id="LightMode"
+					component={Comp}
+					durationInFrames={120}
+					fps={30}
+					width={1080}
+					height={1080}
+					defaultProps={{
+						theme: 'light',
+					}}
+				/>
+				<Composition
+					id="LightModeBanner"
+					component={Banner}
+					durationInFrames={120}
+					fps={30}
+					width={1080}
+					height={540}
+					defaultProps={{
+						theme: 'light',
+					}}
+				/>
+				<Composition
+					id="DarkMode"
+					component={Comp}
+					durationInFrames={120}
+					fps={30}
+					width={1080}
+					height={1080}
+					defaultProps={{
+						theme: 'dark',
+					}}
+				/>
+				<Composition
+					id="DarkModeBanner"
+					component={Banner}
+					durationInFrames={120}
+					fps={30}
+					width={1080}
+					height={540}
+					defaultProps={{
+						theme: 'dark',
+					}}
+				/>
+				<Composition
+					id="TriangletoSwquare"
+					component={TriangleDemo}
+					durationInFrames={240}
+					fps={30}
+					width={1080}
+					height={1080}
+					defaultProps={{theme: 'light'}}
 				/>
 			</Folder>
 		</>
