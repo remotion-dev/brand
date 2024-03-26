@@ -37,6 +37,10 @@ This repo includes the logo, logo with title, and a social preview image (when p
 
 ![Logo in SVG](logo.svg)
 
+## SVG Logo (White)
+
+![Logo in SVG](logo-white.svg)
+
 ## Recorder Animated (Light)
 
 ![Recorder Dark Mode Logo](recorder/light.gif)
