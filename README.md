@@ -1,50 +1,50 @@
-# Remotion Brand assets
+# Remotion Brand Assets
 
 This repo includes the logo, logo with title, and a social preview image (when posting on social media).
 
-## Animated Logo on White
+## Animated logo (light mode)
 
 ![Animated Logo Light](animated-logo-banner-light.gif)
 
-## Animated Logo for GitHub Dark mode
+## Animated logo (dark mode)
 
 ![Animated Logo Light](animated-logo-banner-dark.gif)
 
-## With Title (Light)
+## With title (light mode)
 
 ![Logo with title](withtitle/element-0.png)
 
-## With Title (Dark)
+## With title (dark mode)
 
 ![Logo with title](withtitle-dark/logo-dark.png)
 
-## Without title
+## Without title (light mode)
 
 ![Logo](withouttitle/element-0.png)
 
-## Without title (Light)
+## Without title (dark mode)
 
 <div style="background: #222">
 <img src="logowhite/element-0.png" >
 </img>
 </div>
 
-## Social Preview
+## Social preview image
 
 ![Logo](socialpreview/element-0.png)
 
-## SVG Logo
+## SVG logo (light mode)
 
 ![Logo in SVG](logo.svg)
 
-## SVG Logo (White)
+## SVG logo (dark mode)
 
 ![Logo in SVG](logo-white.svg)
 
-## Recorder Animated (Light)
+## Recorder animated (light mode)
 
 ![Recorder Dark Mode Logo](recorder/light.gif)
 
-## Recorder Animated (Dark)
+## Recorder animated (dark mode)
 
 ![Recorder Dark Mode Logo](recorder/dark.gif)
