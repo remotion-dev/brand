@@ -1,6 +1,7 @@
 import {getVideoMetadata, VideoMetadata} from '@remotion/media-utils';
 import {useEffect, useState} from 'react';
 import {Composition, continueRender, delayRender, Folder} from 'remotion';
+import {AnimatedBanner} from './animated-logo/AnimatedBanner';
 import {AnimatedLogo} from './animated-logo/AnimatedLogo';
 import {AnimatedLogoStringer} from './animated-logo/AnimatedLogoStinger';
 import {AnimatedMaster} from './animated-logo/AnimatedMaster';
@@ -86,11 +87,11 @@ export const RemotionVideo: React.FC = () => {
 					}}
 				/>
 				<Composition
-					component={AnimatedLogo}
+					component={AnimatedBanner}
 					width={1080}
 					height={500}
 					fps={30}
-					durationInFrames={450}
+					durationInFrames={60}
 					id="animated-logo-banner-light"
 					defaultProps={{
 						theme: 'light' as const,
@@ -101,15 +102,15 @@ export const RemotionVideo: React.FC = () => {
 					width={500}
 					height={160}
 					fps={30}
-					durationInFrames={75}
+					durationInFrames={80}
 					id="email-signature"
 				/>
 				<Composition
-					component={AnimatedLogo}
+					component={AnimatedBanner}
 					width={1080}
 					height={500}
 					fps={30}
-					durationInFrames={450}
+					durationInFrames={60}
 					id="animated-logo-banner-dark"
 					defaultProps={{
 						theme: 'dark' as const,
