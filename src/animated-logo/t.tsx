@@ -1,10 +1,12 @@
+import {translatePath} from '@remotion/paths';
 import React from 'react';
 import {spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {motionFixedPath} from './motion-fix';
 import {springB, springC} from './springs';
 import svg = require('svg-path-properties');
 
-const d1 = 'M1410 292L1410 509';
-const d2 = 'M1410 358L1451 358';
+const d1 = translatePath('M1410 292L1410 509', motionFixedPath, 0);
+const d2 = translatePath('M1410 358L1451 358', motionFixedPath, 0);
 
 export const T: React.FC<{
 	style?: React.CSSProperties;
@@ -41,7 +43,7 @@ export const T: React.FC<{
 				strokeDashoffset={strokeDashoffset}
 			/>
 			<path
-				d="M1410 358L1451 358"
+				d={d2}
 				stroke="currentcolor"
 				strokeWidth="46"
 				strokeLinecap="round"

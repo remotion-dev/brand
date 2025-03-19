@@ -1,11 +1,15 @@
+import {reversePath, translatePath} from '@remotion/paths';
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {motionFixedPath} from './motion-fix';
 import {springC} from './springs';
 import svg = require('svg-path-properties');
 // @ts-expect-error no types
 import reverse = require('svg-path-reverse');
 
-const p1 = reverse.reverse('M1511 335 L1511 508');
+const p1 = reversePath(
+	translatePath('M1511 335 L1511 508', motionFixedPath, 0)
+);
 
 export const I: React.FC<{
 	style?: React.CSSProperties;
@@ -34,7 +38,7 @@ export const I: React.FC<{
 		<g style={style}>
 			{iPointProgress > 0 && (
 				<circle
-					cx="1510.5"
+					cx={1510.5 + motionFixedPath}
 					cy="293.5"
 					r="22"
 					fill="currentcolor"

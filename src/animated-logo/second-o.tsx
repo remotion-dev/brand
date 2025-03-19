@@ -1,5 +1,6 @@
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {motionFixedPath} from './motion-fix';
 import {springB} from './springs';
 
 export const SecondO: React.FC<{
@@ -32,7 +33,7 @@ export const SecondO: React.FC<{
 				}}
 			>
 				<rect
-					x={1642.5 - 126 / 2 + xOffset}
+					x={1642.5 - 126 / 2 + xOffset + motionFixedPath}
 					y={421.5 - 126 / 2}
 					width={126 + widthExtension}
 					height={126}
