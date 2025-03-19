@@ -1,5 +1,7 @@
+import {reversePath, translatePath} from '@remotion/paths';
 import React from 'react';
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {motionFixedPath} from './motion-fix';
 import {springA} from './springs';
 import svg = require('svg-path-properties');
 // @ts-expect-error no types
@@ -12,15 +14,23 @@ export const M: React.FC<{
 	const frame = useCurrentFrame();
 	const middle = 485 + 23;
 	const path1 = (b: number, m: number) =>
-		reverse.reverse(
-			`M949 ${b}V406.455C949 379.142 971.142 357 998.455 357V357C1025.77 357 1047.91 379.142 1047.91 406.455V${m}`
+		reversePath(
+			translatePath(
+				`M949 ${b}V406.455C949 379.142 971.142 357 998.455 357V357C1025.77 357 1047.91 379.142 1047.91 406.455V${m}`,
+				motionFixedPath,
+				0
+			)
 		);
 	const path2 = (b: number, m: number) =>
-		`M1048.55 ${m}V406.455C1048.55 379.142 1070.69 357 1098 357V357C1125.31 357 1147.45 379.142 1147.45 406.455V${b}`;
+		translatePath(
+			`M1048.55 ${m}V406.455C1048.55 379.142 1070.69 357 1098 357V357C1125.31 357 1147.45 379.142 1147.45 406.455V${b}`,
+			motionFixedPath,
+			0
+		);
 
 	const prog1 = spring({
 		fps,
-		frame: frame - springA.delay,
+		frame: frame - springA.delay - 3,
 		config: springA.config,
 	});
 
