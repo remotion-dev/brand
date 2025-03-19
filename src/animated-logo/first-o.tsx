@@ -17,7 +17,7 @@ export const FirstO: React.FC<{
 		config: springA.config,
 	});
 
-	const xOffset = interpolate(progress, [0, 1], [1600, 0]);
+	const xOffset = interpolate(progress, [0, 1], [1900, 0]);
 
 	const widthExtension = interpolate(progress, [0, 0.5, 1], [0, 300, 0]);
 
