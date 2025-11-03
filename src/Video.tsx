@@ -178,8 +178,8 @@ export const RemotionVideo: React.FC = () => {
 				/>
 				<Composition
 					component={ExplodingLogo}
-					width={2100}
-					height={2100}
+					width={1920}
+					height={1080}
 					fps={30}
 					durationInFrames={200}
 					id="ExplodingLogo"

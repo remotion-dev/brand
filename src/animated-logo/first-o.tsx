@@ -38,7 +38,7 @@ export const FirstO: React.FC<{
 			<circle
 				cx={1216 + xOffset + width / 2 + motionFixedPath}
 				cy={359 + width / 2}
-				fill="transparent"
+				fill="white"
 				r={40 * innerScale}
 			/>
 		</g>
