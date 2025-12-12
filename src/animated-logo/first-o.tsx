@@ -35,12 +35,6 @@ export const FirstO: React.FC<{
 				strokeWidth={46}
 				rx={63}
 			/>
-			<circle
-				cx={1216 + xOffset + width / 2 + motionFixedPath}
-				cy={359 + width / 2}
-				fill="white"
-				r={40 * innerScale}
-			/>
 		</g>
 	);
 };
