@@ -8,7 +8,7 @@ This repo includes the logo, logo with title, and a social preview image (when p
 
 ## Animated logo (dark mode)
 
-![Animated Logo Light](animated-logo-banner-dark.gif)
+![Animated Logo Light](animated-logo-banner-dark.apng)
 
 ## With title (light mode)
 
