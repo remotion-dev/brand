@@ -1,4 +1,4 @@
-# Remotion Brand Assets
+# Sareva Brand Assets
 
 This repo includes the logo, logo with title, and a social preview image (when posting on social media).
 
